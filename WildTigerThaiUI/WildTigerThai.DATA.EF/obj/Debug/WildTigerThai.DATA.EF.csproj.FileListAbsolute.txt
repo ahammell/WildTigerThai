@@ -1,0 +1,6 @@
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThai.DATA.EF\bin\Debug\WildTigerThai.DATA.EF.dll
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThai.DATA.EF\bin\Debug\WildTigerThai.DATA.EF.pdb
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csprojAssemblyReference.cache
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csproj.CoreCompileInputs.cache
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.dll
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.pdb

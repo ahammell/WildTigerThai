@@ -88,3 +88,6 @@ C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debu
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.csproj.CopyComplete
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.dll
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.pdb
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\bin\WildTigerThai.DATA.EF.dll
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\bin\WildTigerThai.DATA.EF.pdb
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.csprojAssemblyReference.cache
