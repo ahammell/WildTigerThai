@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Food Code Proudly Presents By Themexpert</title>
+    <title>Wild Tiger Thai Restaurant and Bar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
@@ -30,7 +30,7 @@
     <!-- TOP HEADER Start
         ================================================== -->
 
-    <section id="top">
+    @*<section id="top">
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
@@ -78,8 +78,7 @@
                 </div>
             </div> <!-- End Of /.row -->
         </div>	<!-- End Of /.Container -->
-        <!-- MODAL Start
-            ================================================== -->
+        <!-- MODAL Start-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -135,14 +134,14 @@
         </div>
     </section>  <!-- End of /Section -->
     <!-- LOGO Start
-    ================================================== -->
+    ================================================== -->*@
 
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="#">
-                        <img src="~/Content/Images/logo.png" alt="logo">
+                    <a href="">
+                        Wild Tiger Thai Restaurant and Bar
                     </a>
                 </div>	<!-- End of /.col-md-12 -->
             </div>	<!-- End of /.row -->
@@ -167,16 +166,7 @@
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="blog-single.html">ARTICLE</a></li>
                     <li class="dropdown">
-                        <a href="#">
-                            PAGES
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
+                        @Html.Partial("_LoginPartial")
                     </li> <!-- End of /.dropdown -->
 
                 </ul> <!-- End of /.nav-main -->
