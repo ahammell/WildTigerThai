@@ -84,7 +84,6 @@ C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\bin\Micr
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\bin\Microsoft.AI.Web.xml
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.csprojAssemblyReference.cache
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.csproj.CoreCompileInputs.cache
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.csproj.CopyComplete
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThaiUI\WildTigerThaiUI\obj\Debug\WildTigerThaiUI.dll
