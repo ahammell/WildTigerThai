@@ -46,3 +46,9 @@ input[type="checkbox"].input-validation-error {
     color: #90c322;
     font-weight: 900;
 }
+
+.footer-logo{
+    color: #90c322;
+    font-size: 1.25em;
+    font-weight: 200;
+}
