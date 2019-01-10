@@ -4,3 +4,9 @@ C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csproj.CoreCompileInputs.cache
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.dll
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.pdb
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\WildTigerThai.DATA.EF.dll
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\WildTigerThai.DATA.EF.pdb
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csprojResolveAssemblyReference.cache
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csproj.CoreCompileInputs.cache
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.dll
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.pdb
