@@ -391,7 +391,8 @@ namespace WildTigerThai.UI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            AuthenticationManager.SignOut();
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie, DefaultAuthenticationTypes.ExternalCookie);
+            Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
 
