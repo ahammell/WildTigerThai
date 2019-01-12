@@ -71,9 +71,7 @@
                     </li>
                     <li><a href="#">SPECIALS</a></li>
                     <li class="active">
-                        <a href="/Views/Home/Index" class="logo">
-                            Wild Tiger Thai Restaurant and Bar
-                        </a>
+                        @Html.ActionLink("Wild Tiger Thai Restaurant and Bar", "Index", "Home", new { @class = "logo" })
                     </li>
                     <li><a href="~/Views/Home/Contact.cshtml">CONTACT</a></li>
                     <li class="dropdown">

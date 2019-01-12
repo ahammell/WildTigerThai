@@ -6,7 +6,7 @@
         if (User.IsInRole("Administrator"))
         {
             <li>
-                <a class="dropdown-menu-item" href="/Views/Home/AdminDashboard">ADMIN</a>
+                @Html.ActionLink("ADMIN", "AdminDashboard", "Home", new { @class = "dropdown-menu-item" })
             </li>
         }
         <li>
