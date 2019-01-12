@@ -52,3 +52,11 @@ input[type="checkbox"].input-validation-error {
     font-size: 1.25em;
     font-weight: 200;
 }
+
+#green {
+    height: 145px;
+}
+
+#movedown {
+    margin-top: 20px;
+}
