@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WildTigerThai.DATA.EF.Photo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.File)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhotoType.Type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.File)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhotoType.Type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Photo_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Photo_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Photo_ID })
+        </td>
+    </tr>
+}
+
+</table>

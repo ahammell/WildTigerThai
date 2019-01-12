@@ -77,3 +77,10 @@ input[type="checkbox"].input-validation-error {
 .navbar-nav > li {
     margin: 0 3%;
 }
+#green {
+    height: 145px;
+}
+
+#movedown {
+    margin-top: 20px;
+}
