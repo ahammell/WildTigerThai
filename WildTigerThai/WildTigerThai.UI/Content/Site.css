@@ -52,3 +52,28 @@ input[type="checkbox"].input-validation-error {
     font-size: 1.25em;
     font-weight: 200;
 }
+
+.dropdown-menu-center {
+    right: auto !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0) !important;
+    -o-transform: translate(-50%, 0) !important;
+    transform: translate(-50%, 0) !important;
+}
+
+.dropdown-menu-item {
+    text-align: center;
+}
+.navbar {
+    background-color: #888888;
+    border-color: #202020;
+}
+.navbar-container {
+    padding-right:2%;
+    padding-left:2%;
+    margin-left:0;
+    margin-right:0;
+}
+.navbar-nav > li {
+    margin: 0 3%;
+}

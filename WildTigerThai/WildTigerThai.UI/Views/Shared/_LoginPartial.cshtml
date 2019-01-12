@@ -1,22 +1,29 @@
 ﻿@using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated)
-{
-    <li>
-        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-    </li>
-    <li>
-        <a href="javascript:document.getElementById('logoutForm').submit()">
-            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", style = "display: inline-block;" }))
-            {
-                @Html.AntiForgeryToken()
-
-            }
-            Log Off
-        </a>
-    </li>
-    }
-    else
+    @if (Request.IsAuthenticated)
     {
-        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-    }
+        <li>
+            @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "dropdown-menu-item" })
+        </li>
+        if (User.IsInRole("Administrator"))
+        {
+            <li>
+                <a class="dropdown-menu-item" href="#">ADMIN</a>
+            </li>
+        }
+        <li>
+            <a class="dropdown-menu-item" href="javascript:document.getElementById('logoutForm').submit()">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", style = "display: inline-block;", @class = "dropdown-menu-item" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                }
+                Log Off
+            </a>
+        </li>
+}
+else
+{
+    <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "dropdown-menu-item" })</li>
+    <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "dropdown-menu-item" })</li>
+}
+
