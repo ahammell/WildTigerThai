@@ -1,0 +1,50 @@
+﻿@model WildTigerThai.DATA.EF.ProductsToSpecial
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductsToSpecial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Special.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Special.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductToSpecial_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -10,3 +10,9 @@ C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csproj.CoreCompileInputs.cache
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.dll
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.pdb
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\WildTigerThai.DATA.EF.dll.config
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\EntityFramework.dll
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\EntityFramework.xml
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csproj.CopyComplete

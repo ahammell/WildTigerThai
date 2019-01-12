@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +50,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Photo.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoType.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsToSection.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsToSpecial.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Section.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Special.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WildTigerThai.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WildTigerThai.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WildTigerThai.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WildTigerThai.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WildTigerThai.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="WildTigerThai.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WildTigerThai.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="WildTigerThai.edmx.diagram">
+      <DependentUpon>WildTigerThai.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WildTigerThai.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WildTigerThai.Context.cs</LastGenOutput>
+      <DependentUpon>WildTigerThai.edmx</DependentUpon>
+    </Content>
+    <Content Include="WildTigerThai.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WildTigerThai.edmx</DependentUpon>
+      <LastGenOutput>WildTigerThai.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WildTigerThaiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="Photo_ID" />
+    </Key>
+    <Property Name="Photo_ID" Type="Int32" Nullable="false" />
+    <Property Name="PhotoType_ID" Type="Int32" Nullable="false" />
+    <Property Name="File" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="PhotoType" Relationship="Self.Photos_fk0" FromRole="Photos" ToRole="PhotoTypes" />
+    <NavigationProperty Name="Products" Relationship="Self.Products_fk1" FromRole="Photos" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="PhotoType">
+    <Key>
+      <PropertyRef Name="PhotoType_ID" />
+    </Key>
+    <Property Name="PhotoType_ID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Photos" Relationship="Self.Photos_fk0" FromRole="PhotoTypes" ToRole="Photos" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="Int32" Nullable="false" />
+    <Property Name="ProductType_ID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProductPhoto_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Photo" Relationship="Self.Products_fk1" FromRole="Products" ToRole="Photos" />
+    <NavigationProperty Name="ProductType" Relationship="Self.Products_fk0" FromRole="Products" ToRole="ProductTypes" />
+    <NavigationProperty Name="ProductsToSections" Relationship="Self.ProductsToSections_fk0" FromRole="Products" ToRole="ProductsToSections" />
+    <NavigationProperty Name="ProductsToSpecials" Relationship="Self.ProductsToSpecials_fk0" FromRole="Products" ToRole="ProductsToSpecials" />
+  </EntityType>
+  <EntityType Name="ProductsToSection">
+    <Key>
+      <PropertyRef Name="ProductToSection_ID" />
+    </Key>
+    <Property Name="ProductToSection_ID" Type="Int32" Nullable="false" />
+    <Property Name="Product_ID" Type="Int32" Nullable="false" />
+    <Property Name="Section_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.ProductsToSections_fk0" FromRole="ProductsToSections" ToRole="Products" />
+    <NavigationProperty Name="Section" Relationship="Self.ProductsToSections_fk1" FromRole="ProductsToSections" ToRole="Sections" />
+  </EntityType>
+  <EntityType Name="ProductsToSpecial">
+    <Key>
+      <PropertyRef Name="ProductToSpecial_ID" />
+    </Key>
+    <Property Name="ProductToSpecial_ID" Type="Int32" Nullable="false" />
+    <Property Name="Product_ID" Type="Int32" Nullable="false" />
+    <Property Name="Special_ID" Type="Int32" Nullable="false" />
+    <Property Name="SpecialPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.ProductsToSpecials_fk0" FromRole="ProductsToSpecials" ToRole="Products" />
+    <NavigationProperty Name="Special" Relationship="Self.ProductsToSpecials_fk1" FromRole="ProductsToSpecials" ToRole="Specials" />
+  </EntityType>
+  <EntityType Name="ProductType">
+    <Key>
+      <PropertyRef Name="ProductType_ID" />
+    </Key>
+    <Property Name="ProductType_ID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.Products_fk0" FromRole="ProductTypes" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Section_ID" />
+    </Key>
+    <Property Name="Section_ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ProductsToSections" Relationship="Self.ProductsToSections_fk1" FromRole="Sections" ToRole="ProductsToSections" />
+  </EntityType>
+  <EntityType Name="Special">
+    <Key>
+      <PropertyRef Name="Special_ID" />
+    </Key>
+    <Property Name="Special_ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SpecialBeginningDate" Type="DateTime" Precision="3" />
+    <Property Name="SpecialEndDate" Type="DateTime" Precision="3" />
+    <Property Name="SpecialStartTime" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SpecialEndTime" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ProductsToSpecials" Relationship="Self.ProductsToSpecials_fk1" FromRole="Specials" ToRole="ProductsToSpecials" />
+  </EntityType>
+  <Association Name="Photos_fk0">
+    <End Role="PhotoTypes" Type="Self.PhotoType" Multiplicity="1" />
+    <End Role="Photos" Type="Self.Photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhotoTypes">
+        <PropertyRef Name="PhotoType_ID" />
+      </Principal>
+      <Dependent Role="Photos">
+        <PropertyRef Name="PhotoType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Products_fk1">
+    <End Role="Photos" Type="Self.Photo" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Photos">
+        <PropertyRef Name="Photo_ID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="ProductPhoto_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Products_fk0">
+    <End Role="ProductTypes" Type="Self.ProductType" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTypes">
+        <PropertyRef Name="ProductType_ID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="ProductType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductsToSections_fk0">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductsToSections" Type="Self.ProductsToSection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="ProductsToSections">
+        <PropertyRef Name="Product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductsToSpecials_fk0">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductsToSpecials" Type="Self.ProductsToSpecial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Product_ID" />
+      </Principal>
+      <Dependent Role="ProductsToSpecials">
+        <PropertyRef Name="Product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductsToSections_fk1">
+    <End Role="Sections" Type="Self.Section" Multiplicity="1" />
+    <End Role="ProductsToSections" Type="Self.ProductsToSection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sections">
+        <PropertyRef Name="Section_ID" />
+      </Principal>
+      <Dependent Role="ProductsToSections">
+        <PropertyRef Name="Section_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProductsToSpecials_fk1">
+    <End Role="Specials" Type="Self.Special" Multiplicity="1" />
+    <End Role="ProductsToSpecials" Type="Self.ProductsToSpecial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specials">
+        <PropertyRef Name="Special_ID" />
+      </Principal>
+      <Dependent Role="ProductsToSpecials">
+        <PropertyRef Name="Special_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WildTigerThaiDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Photos" EntityType="Self.Photo" />
+    <EntitySet Name="PhotoTypes" EntityType="Self.PhotoType" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductsToSections" EntityType="Self.ProductsToSection" />
+    <EntitySet Name="ProductsToSpecials" EntityType="Self.ProductsToSpecial" />
+    <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
+    <EntitySet Name="Sections" EntityType="Self.Section" />
+    <EntitySet Name="Specials" EntityType="Self.Special" />
+    <AssociationSet Name="Photos_fk0" Association="Self.Photos_fk0">
+      <End Role="PhotoTypes" EntitySet="PhotoTypes" />
+      <End Role="Photos" EntitySet="Photos" />
+    </AssociationSet>
+    <AssociationSet Name="Products_fk1" Association="Self.Products_fk1">
+      <End Role="Photos" EntitySet="Photos" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="Products_fk0" Association="Self.Products_fk0">
+      <End Role="ProductTypes" EntitySet="ProductTypes" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="ProductsToSections_fk0" Association="Self.ProductsToSections_fk0">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductsToSections" EntitySet="ProductsToSections" />
+    </AssociationSet>
+    <AssociationSet Name="ProductsToSpecials_fk0" Association="Self.ProductsToSpecials_fk0">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
+    </AssociationSet>
+    <AssociationSet Name="ProductsToSections_fk1" Association="Self.ProductsToSections_fk1">
+      <End Role="Sections" EntitySet="Sections" />
+      <End Role="ProductsToSections" EntitySet="ProductsToSections" />
+    </AssociationSet>
+    <AssociationSet Name="ProductsToSpecials_fk1" Association="Self.ProductsToSpecials_fk1">
+      <End Role="Specials" EntitySet="Specials" />
+      <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
