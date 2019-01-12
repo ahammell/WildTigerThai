@@ -26,5 +26,11 @@ namespace WildTigerThai.UI.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult AdminDashboard()
+        {
+            return View();
+        }
     }
 }

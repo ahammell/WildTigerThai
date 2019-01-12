@@ -575,6 +575,7 @@
     <Content Include="Views\Specials\Details.cshtml" />
     <Content Include="Views\Specials\Edit.cshtml" />
     <Content Include="Views\Specials\Index.cshtml" />
+    <Content Include="Views\Home\AdminDashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
