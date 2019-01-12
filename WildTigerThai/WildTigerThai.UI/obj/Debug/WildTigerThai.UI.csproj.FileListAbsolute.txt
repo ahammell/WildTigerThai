@@ -208,6 +208,7 @@ C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\Syst
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WebGrease.dll
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.DATA.EF.dll
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.DATA.EF.pdb
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.DATA.EF.dll.config
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\EntityFramework.xml
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\EntityFramework.SqlServer.xml
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\Microsoft.AspNet.Identity.Core.xml
@@ -237,7 +238,8 @@ C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\Micr
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\Microsoft.AI.Web.xml
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.csprojResolveAssemblyReference.cache
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.csprojAssemblyReference.cache
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.csproj.CoreCompileInputs.cache
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.csproj.CopyComplete
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.dll
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.pdb

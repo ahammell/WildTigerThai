@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNet.Identity
-    @if (Request.IsAuthenticated)
+﻿    @if (Request.IsAuthenticated)
     {
         <li>
             @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "dropdown-menu-item" })
