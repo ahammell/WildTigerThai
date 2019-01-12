@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WildTigerThaiDBModelStoreContainer" CdmEntityContainer="WildTigerThaiDBEntities">
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Photo">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="Photo_ID" ColumnName="Photo_ID" />
+          <ScalarProperty Name="PhotoType_ID" ColumnName="PhotoType_ID" />
+          <ScalarProperty Name="File" ColumnName="File" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhotoTypes">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.PhotoType">
+        <MappingFragment StoreEntitySet="PhotoTypes">
+          <ScalarProperty Name="PhotoType_ID" ColumnName="PhotoType_ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="ProductType_ID" ColumnName="ProductType_ID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductPhoto_ID" ColumnName="ProductPhoto_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductsToSections">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.ProductsToSection">
+        <MappingFragment StoreEntitySet="ProductsToSections">
+          <ScalarProperty Name="ProductToSection_ID" ColumnName="ProductToSection_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductsToSpecials">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.ProductsToSpecial">
+        <MappingFragment StoreEntitySet="ProductsToSpecials">
+          <ScalarProperty Name="ProductToSpecial_ID" ColumnName="ProductToSpecial_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Special_ID" ColumnName="Special_ID" />
+          <ScalarProperty Name="SpecialPrice" ColumnName="SpecialPrice" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTypes">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.ProductType">
+        <MappingFragment StoreEntitySet="ProductTypes">
+          <ScalarProperty Name="ProductType_ID" ColumnName="ProductType_ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Section">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specials">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Special">
+        <MappingFragment StoreEntitySet="Specials">
+          <ScalarProperty Name="Special_ID" ColumnName="Special_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SpecialBeginningDate" ColumnName="SpecialBeginningDate" />
+          <ScalarProperty Name="SpecialEndDate" ColumnName="SpecialEndDate" />
+          <ScalarProperty Name="SpecialStartTime" ColumnName="SpecialStartTime" />
+          <ScalarProperty Name="SpecialEndTime" ColumnName="SpecialEndTime" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
