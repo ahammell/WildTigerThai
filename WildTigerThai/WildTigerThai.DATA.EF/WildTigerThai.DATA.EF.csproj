@@ -92,32 +92,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="WildTigerThai.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WildTigerThai.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="WildTigerThai.edmx.diagram">
       <DependentUpon>WildTigerThai.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="WildTigerThai.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>WildTigerThai.Context.cs</LastGenOutput>
       <DependentUpon>WildTigerThai.edmx</DependentUpon>
+      <LastGenOutput>WildTigerThai.Context.cs</LastGenOutput>
     </Content>
     <Content Include="WildTigerThai.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WildTigerThai.edmx</DependentUpon>
       <LastGenOutput>WildTigerThai.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

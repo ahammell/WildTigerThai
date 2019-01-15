@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="efb71c63377c45d4bacef687c3b2b8f2" Name="Diagram1">
+      <Diagram DiagramId="47083c646b23424f80c0254e2b4a26b9" Name="Diagram1">
         <EntityTypeShape EntityType="WildTigerThaiDBModel.Photo" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.PhotoType" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.Product" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
