@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="Photo_ID" />
     </Key>
-    <Property Name="Photo_ID" Type="Int32" Nullable="false" />
+    <Property Name="Photo_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PhotoType_ID" Type="Int32" Nullable="false" />
     <Property Name="File" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
     <NavigationProperty Name="PhotoType" Relationship="Self.Photos_fk0" FromRole="Photos" ToRole="PhotoTypes" />
@@ -14,7 +14,7 @@
     <Key>
       <PropertyRef Name="PhotoType_ID" />
     </Key>
-    <Property Name="PhotoType_ID" Type="Int32" Nullable="false" />
+    <Property Name="PhotoType_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Photos" Relationship="Self.Photos_fk0" FromRole="PhotoTypes" ToRole="Photos" />
@@ -23,7 +23,7 @@
     <Key>
       <PropertyRef Name="Product_ID" />
     </Key>
-    <Property Name="Product_ID" Type="Int32" Nullable="false" />
+    <Property Name="Product_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProductType_ID" Type="Int32" Nullable="false" />
     <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
@@ -39,7 +39,7 @@
     <Key>
       <PropertyRef Name="ProductToSection_ID" />
     </Key>
-    <Property Name="ProductToSection_ID" Type="Int32" Nullable="false" />
+    <Property Name="ProductToSection_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Product_ID" Type="Int32" Nullable="false" />
     <Property Name="Section_ID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="Self.ProductsToSections_fk0" FromRole="ProductsToSections" ToRole="Products" />
@@ -49,7 +49,7 @@
     <Key>
       <PropertyRef Name="ProductToSpecial_ID" />
     </Key>
-    <Property Name="ProductToSpecial_ID" Type="Int32" Nullable="false" />
+    <Property Name="ProductToSpecial_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Product_ID" Type="Int32" Nullable="false" />
     <Property Name="Special_ID" Type="Int32" Nullable="false" />
     <Property Name="SpecialPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
@@ -61,7 +61,7 @@
     <Key>
       <PropertyRef Name="ProductType_ID" />
     </Key>
-    <Property Name="ProductType_ID" Type="Int32" Nullable="false" />
+    <Property Name="ProductType_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Products" Relationship="Self.Products_fk0" FromRole="ProductTypes" ToRole="Products" />
@@ -70,7 +70,7 @@
     <Key>
       <PropertyRef Name="Section_ID" />
     </Key>
-    <Property Name="Section_ID" Type="Int32" Nullable="false" />
+    <Property Name="Section_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="ProductsToSections" Relationship="Self.ProductsToSections_fk1" FromRole="Sections" ToRole="ProductsToSections" />
@@ -79,7 +79,7 @@
     <Key>
       <PropertyRef Name="Special_ID" />
     </Key>
-    <Property Name="Special_ID" Type="Int32" Nullable="false" />
+    <Property Name="Special_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SpecialBeginningDate" Type="DateTime" Precision="3" />
     <Property Name="SpecialEndDate" Type="DateTime" Precision="3" />
