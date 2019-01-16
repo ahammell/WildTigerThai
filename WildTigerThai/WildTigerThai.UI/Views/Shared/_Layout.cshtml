@@ -55,7 +55,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav nav-main">
                     <li class="dropdown ">
-                        <a href="#">
                             MENU
                             <ul class="dropdown-menu dropdown-menu-center ">
                                 <li><a class="dropdown-menu-item">APPETIZERS</a></li>
@@ -67,7 +66,6 @@
                                 <li><a class="dropdown-menu-item">MENU DOWNLOAD</a></li>
 
                             </ul>
-                        </a>
                     </li>
                     <li><a href="#">SPECIALS</a></li>
                     <li class="active">
@@ -75,13 +73,10 @@
                     </li>
                     <li><a href="~/Views/Home/Contact.cshtml">CONTACT</a></li>
                     <li class="dropdown">
-                        <a href="#">
                             ACCOUNT
                             <ul class="dropdown-menu dropdown-menu-center ">
                                 @Html.Partial("_loginPartial")
                             </ul>
-                        </a>
-
                     </li>
 
                 </ul> <!-- End of /.nav-main -->
@@ -90,8 +85,9 @@
     </nav>	<!-- End of /.nav -->
     <!-- SLIDER Start
     ================================================== -->
-    @RenderBody()
-    <footer>
+    <div class="custom-container">
+        @RenderBody()
+    </div>    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
