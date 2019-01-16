@@ -78,7 +78,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Type,Active")] PhotoType photoType)
+        public ActionResult Edit([Bind(Include = "PhotoType_ID,Type,Active")] PhotoType photoType)
         {
             if (ModelState.IsValid)
             {

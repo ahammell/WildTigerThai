@@ -78,7 +78,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name,SpecialBeginningDate,SpecialEndDate,SpecialStartTime,SpecialEndTime,Active")] Special special)
+        public ActionResult Edit([Bind(Include = "Specials_ID,Name,SpecialBeginningDate,SpecialEndDate,SpecialStartTime,SpecialEndTime,Active")] Special special)
         {
             if (ModelState.IsValid)
             {
