@@ -120,6 +120,7 @@ C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.csproj.CopyComplete
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.dll
 C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.pdb
+C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.DATA.EF.dll.config
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\ApplicationInsights.config
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.UI.dll.config
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.UI.dll
@@ -243,4 +244,3 @@ C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debu
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.csproj.CopyComplete
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.dll
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\obj\Debug\WildTigerThai.UI.pdb
-C:\Users\Austin\Documents\WildTigerThai\WildTigerThai\WildTigerThai.UI\bin\WildTigerThai.DATA.EF.dll.config
