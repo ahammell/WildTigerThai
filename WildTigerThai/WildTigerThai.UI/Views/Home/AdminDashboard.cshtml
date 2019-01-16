@@ -3,15 +3,16 @@
     ViewBag.Title = "Admin Dashboard";
 }
 
-<h2>Admin Dashboard</h2>
+<h2 class="center">Admin Dashboard</h2>
 
-<ul>
-    <li><a href="~/Products/Index">Products</a></li>
-    <li><a href="~/PhotoTypes/Index">PhotoTypes</a></li>
-    <li><a href="~/Photos/Index">Photos</a></li>
-    <li><a href="~/ProductsToSections/Index">ProductsToSections</a></li>
-    <li><a href="~/ProductsToSpecials/Index">ProductsToSpecials</a></li>
-    <li><a href="~/ProductTypes/Index">ProductTypes</a></li>
-    <li><a href="~/Sections/Index">Sections</a></li>
-    <li><a href="~/Specials/Index">Specials</a></li>
-</ul>
+<div class="grid-container">
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/Products/Index'" ;>Products</button>
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/PhotoTypes/Index'" ;>PhotoTypes</button>
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/Photos/Index'" ;>Photos</button>
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/ProductsToSections/Index'" ;>ProductsToSections</button>
+    <div></div>    
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/ProductsToSpecials/Index'" ;>ProductsToSpecials</button>
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/ProductTypes/Index'" ;>ProductTypes</button>
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/Sections/Index'" ;>Sections</button>
+    <button class="grid-item btn-default btn-lg" onclick="location.href='/Specials/Index'" ;>Specials</button>
+</div>

@@ -5,9 +5,9 @@
         </li>
         if (User.IsInRole("Administrator"))
         {
-            <li>
-                @Html.ActionLink("ADMIN", "AdminDashboard", "Home", new { @class = "dropdown-menu-item" })
-            </li>
+        <li>
+            <a href="~/Home/AdminDashboard">ADMIN</a>
+        </li>
         }
         <li>
             <a class="dropdown-menu-item" href="javascript:document.getElementById('logoutForm').submit()">
