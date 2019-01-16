@@ -48,7 +48,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Photo_ID,PhotoType_ID,File")] Photo photo)
+        public ActionResult Create([Bind(Include = "PhotoType_ID,File")] Photo photo)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Photo_ID,PhotoType_ID,File")] Photo photo)
+        public ActionResult Edit([Bind(Include = "PhotoType_ID,File")] Photo photo)
         {
             if (ModelState.IsValid)
             {

@@ -11,7 +11,8 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Section
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +20,8 @@ namespace WildTigerThai.DATA.EF
         {
             this.ProductsToSections = new HashSet<ProductsToSection>();
         }
-    
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Section_ID { get; set; }
         public string Name { get; set; }
         public bool Active { get; set; }

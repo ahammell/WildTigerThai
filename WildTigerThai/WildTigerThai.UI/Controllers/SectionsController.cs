@@ -46,7 +46,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Section_ID,Name,Active")] Section section)
+        public ActionResult Create([Bind(Include = "Name,Active")] Section section)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Section_ID,Name,Active")] Section section)
+        public ActionResult Edit([Bind(Include = "Name,Active")] Section section)
         {
             if (ModelState.IsValid)
             {

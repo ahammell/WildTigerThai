@@ -49,7 +49,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Product_ID,ProductType_ID,ProductName,Description,Active,Price,ProductPhoto_ID")] Product product)
+        public ActionResult Create([Bind(Include = "ProductType_ID,ProductName,Description,Active,Price,ProductPhoto_ID")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Product_ID,ProductType_ID,ProductName,Description,Active,Price,ProductPhoto_ID")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductType_ID,ProductName,Description,Active,Price,ProductPhoto_ID")] Product product)
         {
             if (ModelState.IsValid)
             {

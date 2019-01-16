@@ -11,7 +11,8 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Special
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,7 +20,8 @@ namespace WildTigerThai.DATA.EF
         {
             this.ProductsToSpecials = new HashSet<ProductsToSpecial>();
         }
-    
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Special_ID { get; set; }
         public string Name { get; set; }
         public Nullable<System.DateTime> SpecialBeginningDate { get; set; }

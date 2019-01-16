@@ -11,9 +11,11 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class ProductsToSpecial
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductToSpecial_ID { get; set; }
         public int Product_ID { get; set; }
         public int Special_ID { get; set; }
