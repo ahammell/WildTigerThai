@@ -11,6 +11,7 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class Section
@@ -23,6 +24,9 @@ namespace WildTigerThai.DATA.EF
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Section_ID { get; set; }
+        [Display(Name = "Section Name")]
+        [StringLength(100, ErrorMessage = "Should not exceed 100 characters")]
+        [Required(ErrorMessage = "*Required")]
         public string Name { get; set; }
         public bool Active { get; set; }
     

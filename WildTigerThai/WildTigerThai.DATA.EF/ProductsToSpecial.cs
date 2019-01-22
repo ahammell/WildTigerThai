@@ -11,14 +11,19 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class ProductsToSpecial
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductToSpecial_ID { get; set; }
+        [Display(Name = "Product")]
         public int Product_ID { get; set; }
+        [Display(Name = "Special")]
         public int Special_ID { get; set; }
+        [Display(Name = "Special Price")]
+        [DisplayFormat(NullDisplayText = "N/A", DataFormatString = "{0:c}")]
         public decimal SpecialPrice { get; set; }
         public bool Active { get; set; }
     

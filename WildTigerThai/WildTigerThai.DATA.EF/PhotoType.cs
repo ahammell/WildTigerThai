@@ -11,6 +11,7 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class PhotoType
@@ -23,6 +24,9 @@ namespace WildTigerThai.DATA.EF
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PhotoType_ID { get; set; }
+        [Display(Name = "Product Type Description")]
+        [StringLength(100, ErrorMessage = "Should not exceed 100 characters")]
+        [Required(ErrorMessage = "*Required")]
         public string Type { get; set; }
         public bool Active { get; set; }
     
