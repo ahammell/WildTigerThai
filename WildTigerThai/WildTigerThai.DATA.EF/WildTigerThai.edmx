@@ -4,7 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WildTigerThaiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WildTigerThaiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Menus">
+          <Key>
+            <PropertyRef Name="Menu_ID" />
+          </Key>
+          <Property Name="Menu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Menu" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="SectionPrecedence" Type="int" Nullable="false" />
+          <Property Name="MenuName" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Photos">
           <Key>
             <PropertyRef Name="Photo_ID" />
@@ -79,6 +89,18 @@
           <Property Name="SpecialEndTime" Type="varchar" MaxLength="100" />
           <Property Name="Active" Type="bit" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Menus_Sections">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="1" />
+          <End Role="Menus" Type="Self.Menus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="Section_ID" />
+            </Principal>
+            <Dependent Role="Menus">
+              <PropertyRef Name="Section_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="Photos_fk0">
           <End Role="PhotoTypes" Type="Self.PhotoTypes" Multiplicity="1" />
           <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
@@ -164,6 +186,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="WildTigerThaiDBModelStoreContainer">
+          <EntitySet Name="Menus" EntityType="Self.Menus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PhotoTypes" EntityType="Self.PhotoTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
@@ -172,6 +195,10 @@
           <EntitySet Name="ProductTypes" EntityType="Self.ProductTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sections" EntityType="Self.Sections" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Specials" EntityType="Self.Specials" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Menus_Sections" Association="Self.FK_Menus_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Menus" EntitySet="Menus" />
+          </AssociationSet>
           <AssociationSet Name="Photos_fk0" Association="Self.Photos_fk0">
             <End Role="PhotoTypes" EntitySet="PhotoTypes" />
             <End Role="Photos" EntitySet="Photos" />
@@ -201,8 +228,7 @@
             <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WildTigerThaiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -280,6 +306,7 @@
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Active" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="ProductsToSections" Relationship="Self.ProductsToSections_fk1" FromRole="Sections" ToRole="ProductsToSections" />
+          <NavigationProperty Name="Menus" Relationship="WildTigerThaiDBModel.FK_Menus_Sections" FromRole="Section" ToRole="Menu" />
         </EntityType>
         <EntityType Name="Special">
           <Key>
@@ -415,7 +442,35 @@
             <End Role="Specials" EntitySet="Specials" />
             <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
           </AssociationSet>
+          <EntitySet Name="Menus" EntityType="WildTigerThaiDBModel.Menu" />
+          <AssociationSet Name="FK_Menus_Sections" Association="WildTigerThaiDBModel.FK_Menus_Sections">
+            <End Role="Section" EntitySet="Sections" />
+            <End Role="Menu" EntitySet="Menus" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="Menu_ID" />
+          </Key>
+          <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Menu1" Type="Int32" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="SectionPrecedence" Type="Int32" Nullable="false" />
+          <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Section" Relationship="WildTigerThaiDBModel.FK_Menus_Sections" FromRole="Menu" ToRole="Section" />
+        </EntityType>
+        <Association Name="FK_Menus_Sections">
+          <End Type="WildTigerThaiDBModel.Section" Role="Section" Multiplicity="1" />
+          <End Type="WildTigerThaiDBModel.Menu" Role="Menu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Section">
+              <PropertyRef Name="Section_ID" />
+            </Principal>
+            <Dependent Role="Menu">
+              <PropertyRef Name="Section_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -501,6 +556,17 @@
                 <ScalarProperty Name="SpecialStartTime" ColumnName="SpecialStartTime" />
                 <ScalarProperty Name="SpecialEndTime" ColumnName="SpecialEndTime" />
                 <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="WildTigerThaiDBModel.Menu">
+              <MappingFragment StoreEntitySet="Menus">
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="SectionPrecedence" ColumnName="SectionPrecedence" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Menu1" ColumnName="Menu" />
+                <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -83,5 +83,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Menu">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="SectionPrecedence" ColumnName="SectionPrecedence" />
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Menu1" ColumnName="Menu" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

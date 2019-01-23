@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu.cs">
+      <DependentUpon>WildTigerThai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="METADATA.cs" />
     <Compile Include="Photo.cs">
       <DependentUpon>WildTigerThai.tt</DependentUpon>
     </Compile>
