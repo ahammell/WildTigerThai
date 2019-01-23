@@ -89,12 +89,25 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Photos_ID,PhotoType_ID,File")] Photo photo)
+        public ActionResult Edit(HttpPostedFileBase file, [Bind(Include = "Photo_ID,PhotoType_ID,File")] Photo photo)
         {
             if (ModelState.IsValid)
             {
+                if (file != null)
+                {
+                    if (file.ContentLength > 0)
+                    {
+                        byte[] uploadedFile = new byte[file.InputStream.Length];
+                        file.InputStream.Read(uploadedFile, 0, uploadedFile.Length);
+                        if (photo.File != uploadedFile)
+                        {
+                            photo.File = uploadedFile;
+                        }
+                    }
+                }
                 db.Entry(photo).State = EntityState.Modified;
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             ViewBag.PhotoType_ID = new SelectList(db.PhotoTypes, "PhotoType_ID", "Type", photo.PhotoType_ID);
