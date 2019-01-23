@@ -22,7 +22,7 @@ namespace WildTigerThai.DATA.EF
             this.Products = new HashSet<Product>();
         }
 
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Photo_ID { get; set; }
         public int PhotoType_ID { get; set; }
         [Display(Name = "YURRRS")]

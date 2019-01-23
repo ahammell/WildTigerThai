@@ -74,6 +74,7 @@
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="ProductsToSections" Relationship="Self.ProductsToSections_fk1" FromRole="Sections" ToRole="ProductsToSections" />
+    <NavigationProperty Name="Menus" Relationship="WildTigerThaiDBModel.FK_Menus_Sections" FromRole="Section" ToRole="Menu" />
   </EntityType>
   <EntityType Name="Special">
     <Key>
@@ -209,5 +210,33 @@
       <End Role="Specials" EntitySet="Specials" />
       <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
     </AssociationSet>
+    <EntitySet Name="Menus" EntityType="WildTigerThaiDBModel.Menu" />
+    <AssociationSet Name="FK_Menus_Sections" Association="WildTigerThaiDBModel.FK_Menus_Sections">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Menu" EntitySet="Menus" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Menu_ID" />
+    </Key>
+    <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Menu1" Type="Int32" Nullable="false" />
+    <Property Name="Section_ID" Type="Int32" Nullable="false" />
+    <Property Name="SectionPrecedence" Type="Int32" Nullable="false" />
+    <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Section" Relationship="WildTigerThaiDBModel.FK_Menus_Sections" FromRole="Menu" ToRole="Section" />
+  </EntityType>
+  <Association Name="FK_Menus_Sections">
+    <End Type="WildTigerThaiDBModel.Section" Role="Section" Multiplicity="1" />
+    <End Type="WildTigerThaiDBModel.Menu" Role="Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="Section_ID" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="Section_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

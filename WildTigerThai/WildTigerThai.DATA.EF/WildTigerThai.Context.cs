@@ -33,5 +33,6 @@ namespace WildTigerThai.DATA.EF
         public virtual DbSet<ProductType> ProductTypes { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
         public virtual DbSet<Special> Specials { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
     }
 }
