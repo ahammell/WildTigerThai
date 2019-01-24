@@ -1,6 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="WildTigerThaiDBModelStoreContainer" CdmEntityContainer="WildTigerThaiDBEntities">
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Menu">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="Menu1" ColumnName="Menu" />
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="SectionPrecedence" ColumnName="SectionPrecedence" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Photos">
       <EntityTypeMapping TypeName="WildTigerThaiDBModel.Photo">
         <MappingFragment StoreEntitySet="Photos">
@@ -80,17 +91,6 @@
           <ScalarProperty Name="SpecialStartTime" ColumnName="SpecialStartTime" />
           <ScalarProperty Name="SpecialEndTime" ColumnName="SpecialEndTime" />
           <ScalarProperty Name="Active" ColumnName="Active" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Menus">
-      <EntityTypeMapping TypeName="WildTigerThaiDBModel.Menu">
-        <MappingFragment StoreEntitySet="Menus">
-          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
-          <ScalarProperty Name="SectionPrecedence" ColumnName="SectionPrecedence" />
-          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
-          <ScalarProperty Name="Menu1" ColumnName="Menu" />
-          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

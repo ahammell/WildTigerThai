@@ -14,6 +14,8 @@ namespace WildTigerThai.DATA.EF
     //PhotoMetaDATA
     public class PhotoMETADATA
     {
+        [Display(Name = "Photo Type")]
+        public int PhotoType_ID { get; set; }
         [Display(Name = "Photo")]
         public byte[] File { get; set; }
     }
@@ -107,5 +109,23 @@ namespace WildTigerThai.DATA.EF
     [MetadataType(typeof(SpecialMETADATA))]
     public partial class Special { }
 
-
+    //MenuMETADATA
+    public class MenuMETADATA
+    {
+        //public int Menu_ID { get; set; }
+        [Display(Name = "Menu")]
+        [Required(ErrorMessage ="*Required")]
+        public int Menu1 { get; set; }
+        [Display(Name = "Section")]
+        [Required(ErrorMessage = "*Required")]
+        public int Section_ID { get; set; }
+        [Display(Name = "Section Precedence")]
+        [Required(ErrorMessage = "*Required")]
+        public int SectionPrecedence { get; set; }
+        [Display(Name = "Menu Name")]
+        [StringLength(50, ErrorMessage = "Should not exceed 50 characters")]
+        public string MenuName { get; set; }
+    }
+    [MetadataType(typeof(MenuMETADATA))]
+    public partial class Menu { }
 }

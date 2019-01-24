@@ -94,7 +94,7 @@ input[type="checkbox"].input-validation-error {
     grid-row-gap: 3em;
     padding-top:4%;
     padding-bottom:4%;
-    max-width:90%;
+    max-width:90% !important;
     margin: auto;
 }
 .grid-item {
@@ -107,11 +107,15 @@ input[type="checkbox"].input-validation-error {
 .custom-container {
     padding-right: 15px;
     padding-left: 15px;
-    max-width: 90%;
+    max-width: 50%;
     margin:auto;
 }
 #tableImage {
     height:15em;
     object-fit:fill;
 
+}
+
+.custom-container h2{
+    text-align: center;
 }

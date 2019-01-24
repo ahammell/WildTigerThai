@@ -4,15 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="47083c646b23424f80c0254e2b4a26b9" Name="Diagram1">
+      <Diagram DiagramId="bf4a11e64b914dcda11c51d1bc47d51b" Name="Diagram1">
+        <EntityTypeShape EntityType="WildTigerThaiDBModel.Menu" Width="1.5" PointX="7.5" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.Photo" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.PhotoType" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.Product" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WildTigerThaiDBModel.ProductsToSection" Width="2.375" PointX="7.625" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="WildTigerThaiDBModel.ProductsToSpecial" Width="2.375" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WildTigerThaiDBModel.ProductsToSection" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="WildTigerThaiDBModel.ProductsToSpecial" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.ProductType" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.Section" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="WildTigerThaiDBModel.Special" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="WildTigerThaiDBModel.FK_Menus_Sections" ManuallyRouted="false" />
         <AssociationConnector Association="WildTigerThaiDBModel.Photos_fk0" ManuallyRouted="false" />
         <AssociationConnector Association="WildTigerThaiDBModel.Products_fk1" ManuallyRouted="false" />
         <AssociationConnector Association="WildTigerThaiDBModel.Products_fk0" ManuallyRouted="false" />
@@ -20,8 +22,6 @@
         <AssociationConnector Association="WildTigerThaiDBModel.ProductsToSpecials_fk0" ManuallyRouted="false" />
         <AssociationConnector Association="WildTigerThaiDBModel.ProductsToSections_fk1" ManuallyRouted="false" />
         <AssociationConnector Association="WildTigerThaiDBModel.ProductsToSpecials_fk1" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="WildTigerThaiDBModel.Menu" Width="1.5" PointX="7.5" PointY="11.875" />
-        <AssociationConnector Association="WildTigerThaiDBModel.FK_Menus_Sections" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -11,25 +11,22 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class Section
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Section()
         {
+            this.Menus = new HashSet<Menu>();
             this.ProductsToSections = new HashSet<ProductsToSection>();
         }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    
         public int Section_ID { get; set; }
-        [Display(Name = "Section Name")]
-        [StringLength(100, ErrorMessage = "Should not exceed 100 characters")]
-        [Required(ErrorMessage = "*Required")]
         public string Name { get; set; }
         public bool Active { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Menu> Menus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductsToSection> ProductsToSections { get; set; }
     }

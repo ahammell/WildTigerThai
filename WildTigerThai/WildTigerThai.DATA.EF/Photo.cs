@@ -11,9 +11,7 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class Photo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,11 +19,9 @@ namespace WildTigerThai.DATA.EF
         {
             this.Products = new HashSet<Product>();
         }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    
         public int Photo_ID { get; set; }
         public int PhotoType_ID { get; set; }
-        [Display(Name = "YURRRS")]
         public byte[] File { get; set; }
     
         public virtual PhotoType PhotoType { get; set; }

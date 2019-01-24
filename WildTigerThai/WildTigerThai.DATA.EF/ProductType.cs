@@ -11,9 +11,7 @@ namespace WildTigerThai.DATA.EF
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class ProductType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,12 +19,8 @@ namespace WildTigerThai.DATA.EF
         {
             this.Products = new HashSet<Product>();
         }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    
         public int ProductType_ID { get; set; }
-        [Display(Name = "Product Description")]
-        [StringLength(100, ErrorMessage = "Should not exceed 100 characters")]
-        [Required(ErrorMessage = "*Required")]
         public string Description { get; set; }
         public bool Active { get; set; }
     

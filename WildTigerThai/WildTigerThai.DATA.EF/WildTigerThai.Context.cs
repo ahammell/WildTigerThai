@@ -25,6 +25,7 @@ namespace WildTigerThai.DATA.EF
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<Photo> Photos { get; set; }
         public virtual DbSet<PhotoType> PhotoTypes { get; set; }
         public virtual DbSet<Product> Products { get; set; }
@@ -33,6 +34,5 @@ namespace WildTigerThai.DATA.EF
         public virtual DbSet<ProductType> ProductTypes { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
         public virtual DbSet<Special> Specials { get; set; }
-        public virtual DbSet<Menu> Menus { get; set; }
     }
 }
