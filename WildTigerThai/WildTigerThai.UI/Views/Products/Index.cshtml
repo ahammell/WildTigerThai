@@ -1,14 +1,19 @@
 ﻿@model IEnumerable<WildTigerThai.DATA.EF.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Products";
 }
 
-<h2 class="center">Index</h2>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
+<h2 class="center">@ViewBag.Title</h2>
+<p>
+    @Html.ActionLink("Admin Panel", "AdminDashboard", "Home", null, new { @class = "btn btn-warning", @role = "button", @style = "width:8em; float:left;" })
+</p>
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning", @role = "button", @style = "width:8em; clear:right;" })
+</p>
+<table class="table table-striped table-bordered">
+    <thead>
+
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ProductName)
@@ -30,7 +35,8 @@
             </th>
             <th></th>
         </tr>
-
+    </thead>
+    <tbody>
         @foreach (var item in Model)
         {
             <tr>
@@ -53,11 +59,12 @@
                     @Html.DisplayFor(modelItem => item.ProductType.Description)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Product_ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Product_ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Product_ID })
+                    <input id="@item.Product_ID" type="button" class="btn btn-warning" value="Edit" onclick="location.href='@Url.Action("Edit", "Products", new { id = item.Product_ID})'" style="width:5em" /><br />
+                    <input id="@item.Product_ID" type="button" class="btn btn-warning" value="Details" onclick="location.href='@Url.Action("Details", "Products", new { id = item.Product_ID})'" style="width:5em" /><br />
+                    <input id="@item.Product_ID" type="button" class="btn btn-warning" value="Delete" onclick="location.href='@Url.Action("Delete", "Products", new { id = item.Product_ID})'" style="width:5em" />
+
                 </td>
             </tr>
         }
-
-    </table>
+    </tbody>
+</table>

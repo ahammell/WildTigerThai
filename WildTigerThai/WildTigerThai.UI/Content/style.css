@@ -1,6 +1,6 @@
 /*------------- Common-CSS----------------*/
 
-body { font-family: 'Open Sans', sans-serif; color: #555; font-size: 14px; font-weight: 300; }
+body { font-family: 'Lato', sans-serif; color: #555; font-size: 14px; font-weight: 300; }
 li { list-style: none;}
 a:hover { text-decoration: none; }
 
@@ -82,10 +82,7 @@ section+section { margin-top: 50px; }
 #top .login-cart li a i {
 	margin-right: 3px;
 }
-header {
-	padding: 40px 0;
-	text-align: center;
-}
+
 
 /*	Search Box Start
     ==================================================*/
@@ -263,9 +260,10 @@ header {
 	color: #e67700;
 }
 .nav-main > li a {
-	padding: 20px 15px;
-	color: #555;
-	font-size: 17px;
+    padding: 20px 15px;
+    color: black;
+    font-weight:bold;
+    font-size: 17px;
 }
 .navbar-nav {
 	float: none;
