@@ -30,6 +30,7 @@ input,
 select,
 textarea {
     max-width: 280px;
+    max-height:100%;
 }
 
 /* styles for validation helpers */
@@ -118,10 +119,11 @@ input[type="checkbox"].input-validation-error {
     grid-template-columns: auto auto auto;
     grid-column-gap: 5em;
     grid-row-gap: 3em;
-    padding-top:4%;
-    padding-bottom:4%;
-    max-width:90% !important;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    max-width: 90% !important;
     margin: auto;
+    max-height: 100% !important;
 }
 .grid-item {
     vertical-align: middle;
@@ -135,9 +137,11 @@ input[type="checkbox"].input-validation-error {
     padding-left: 15px;
     max-width: 90%;
     margin:auto;
+    max-height:100%;
 }
 #tableImage {
-    height:15em;
+    width: 20%;
+    height:auto;
     object-fit:fill;
 
 }
@@ -194,4 +198,15 @@ input[type="checkbox"].input-validation-error {
     top: 18px;
     width: 0%;
     left: 50%;
+}
+
+.full-border{
+    width:100%;
+    border: 1px solid black;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#mobile #tableImage{
+    margin: 10px;
 }

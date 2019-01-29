@@ -196,6 +196,17 @@
         $(document).ready(function () {
             $('.table').DataTable();
         });
+
+        let width = $(window).width();
+        let height = $(window).height();
+
+        $('#mobile').css("display", "none");
+        $('#desktop').css("display", "block");
+
+        if (width <= 1242 && height <= 2436) {
+            $('#mobile').css("display", "block");
+            $('#desktop').css("display", "none");
+        }
     </script>
     @RenderSection("scripts", false)
 </body>
