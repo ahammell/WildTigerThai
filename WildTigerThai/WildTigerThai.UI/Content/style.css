@@ -241,7 +241,7 @@ section+section { margin-top: 50px; }
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background: #e67700;
+	background: black;
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, 
@@ -257,7 +257,7 @@ section+section { margin-top: 50px; }
 	transform: translateY(0px);	
 }
 .nav-main > li a:hover, .nav-main > li a:focus {
-	color: #e67700;
+	color: black;
 }
 .nav-main > li a {
     padding: 20px 15px;
@@ -531,21 +531,12 @@ section+section { margin-top: 50px; }
 }
 
 
-
-
-/*	 Call To Action Start
-    ==================================================*/
-
-
-
-
 /*	 Footer Start
     ==================================================*/
 
 footer {
 	background: #383838;
 	color: #fff;
-	padding-top: 40px;
 }
 footer .block {
 	color: #B6B6B6;
@@ -581,11 +572,14 @@ footer .block span {
 	color: #fff;
 }
 .footer-bottom {
-	width: 100%;
-	margin-top: 70px;
-	border-top: 1px solid #2C2C2C;
-	box-shadow: 0 -1px 0 #575656;
-	padding-top: 10px;
+    position: relative;
+    margin-top:-15em;
+    width: 100%;
+    height: 15em;
+    clear:both;
+    border-top: 1px solid #2C2C2C;
+    box-shadow: 0 -1px 0 #575656;
+    background-color: #888888;
 }
 .copyright-text {
 	margin-top: 12px;
@@ -604,7 +598,6 @@ footer .block span {
 
 
 .social-icon li {
-	float: left;
 	margin-right: 8px;
 }
 .social-icon li a i {
@@ -614,7 +607,6 @@ footer .block span {
 .social-icon li a {
 	padding: 8px;
 	background: #e67700;
-	display: inline-block;
 }
 .facebook-icon .fa-facebook {
 	padding: 0px 7px;

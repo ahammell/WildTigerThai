@@ -73,7 +73,7 @@
                         </ul>
                     </li>
                     <li><a href="#">SPECIALS</a></li>
-                    <li class="active">
+                    <li>
                         <a href="~/Home/Index" class="logo">Wild Tiger Thai Restaurant and Bar</a>
                     </li>
                     <li><a href="~/Home/Contact">CONTACT</a></li>
@@ -88,30 +88,65 @@
             </div>	<!-- /.navbar-collapse -->
         </div>	<!-- /.container-fluid -->
     </nav>	<!-- End of /.nav -->
-    <!-- SLIDER Start
-    ================================================== -->
     <div class="custom-container">
         @RenderBody()
+        <aside>
+            <section id="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 aside-menu">
+                            <div class="block">
+                                <div class="media">
+                                    <div id="movedown" class="pull-left" href="#">
+                                        <img  style="padding-left:2em;"src="~/Content/Images/take-away (64).png" />
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading center">Order Online</h4>
+                                        <p class="center">
+                                            <a href="#" id="movedown" class="btn btn-default" role="button">
+                                                <span>Order Online</span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>	<!-- End of /.row -->
+                    <div class="row">
+                        <div class="col-md-4 aside-menu">
+                            <div class="block">
+                                <div id="green" class="media">
+                                    <div id="movedown" class="pull-left" href="#">
+                                        <i class=" fa fa-hourglass-half"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Hours</h4>
+                                        <p>
+                                            Monday - Thursday 11AM-9PM <br />
+                                            Friday 11AM-10PM <br />
+                                            Saturday 12PM-10PM <br />
+                                            Sunday 12PM-9PM <br />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>	<!-- End of /.container -->
+            </section>	<!-- End of section -->
+        </aside>
     </div>    
-    <footer>
+    <footer class="footer-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="block clearfix">
+                    <div class="block">
                         <a href="#" class="footer-logo">
-                            Wild Tiger Thai Restaurant and Bar
+                            <img class="sliderImage" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
                         </a>
                         <p>
                             We are bringing new Thai flavor dishes to the South East of Vancouver, WA.
                         </p>
-                        <h4 class="connect-heading">CONNECT WITH US</h4>
-                        <ul class="social-icon">
-                            <li>
-                                <a class="facebook-icon" href="https://www.facebook.com/wildtigerthairestaurantofficialpage/" target="_blank">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>	<!-- End Of /.social-icon -->
                     </div>	<!-- End Of /.block -->
                 </div> <!-- End Of /.Col-md-4 -->
                 <div class="col-md-4">
@@ -123,72 +158,19 @@
                         <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 360-882-8887 </p>
                         <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 360-882-8887</p>
                     </div>	<!-- End Of /.block -->
-                </div> <!-- End Of Col-md-3 -->
+                </div> <!-- End Of Col-md-4 -->
                 <div class="col-md-4">
-                    <div class="block">
-                        <h4>UPCOMING ITEMS</h4>
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/Content/Images/product-item.jpg" alt="...">
+                    <p>Find us on Facebook!</p>
+                    <ul class="social-icon">
+                        <li>
+                            <a class="facebook-icon" href="https://www.facebook.com/wildtigerthairestaurantofficialpage/" target="_blank">
+                                <i class="fa fa-facebook"></i>
                             </a>
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/Content/Images/product-item.jpg" alt="...">
-                            </a>
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/Content/Images/product-item.jpg" alt="...">
-                            </a>
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/Content/Images/product-item.jpg" alt="...">
-                            </a>
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/Content/Images/product-item.jpg" alt="...">
-                            </a>
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="~/Content/Images/product-item.jpg" alt="...">
-                            </a>
-                        </div>	<!-- End Of /.media -->
-                    </div>	<!-- End Of /.block -->
-                </div> <!-- End Of Col-md-3 -->
+                        </li>
+                    </ul>	<!-- End Of /.social-icon -->
+                </div><!-- End Of Col-md-4 -->
             </div> <!-- End Of /.row -->
         </div> <!-- End Of /.Container -->
-        <!-- FOOTER-BOTTOM Start
-        ================================================== -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="cash-out pull-left">
-                            <li>
-                                <a href="#">
-                                    <img src="~/Content/Images/American-Express.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="~/Content/Images/PayPal.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="~/Content/Images/Maestro.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="~/Content/Images/Visa.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="~/Content/Images/Visa-Electron.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="copyright-text pull-right">Designed by <a href="http://www.themexpert.com">Themexpert</a> All Rights Reserved</p>
-                    </div>	<!-- End Of /.col-md-12 -->
-                </div>	<!-- End Of /.row -->
-            </div>	<!-- End Of /.container -->
-        </div>	<!-- End Of /.footer-bottom -->
     </footer> <!-- End Of Footer -->
 
     <a id="back-top" href="#"></a>

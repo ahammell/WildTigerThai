@@ -1,5 +1,14 @@
-﻿body {
+﻿htmml, body {
     background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+aside {
+    display:block;
+    z-index:100;
+    position:fixed;
+    left:-1em;
 }
 
 /*Scrollbar CSS*/
@@ -78,21 +87,24 @@ input[type="checkbox"].input-validation-error {
 }
 
 .dropdown:hover {
-    background-color: white;
-    color: #e67700;
+    background-color: none;
+    color: black;
 }
 .dropdown {
     padding: 20px 15px;
     color: black;
     font-weight: bold;
 }
-
+.center {
+    text-align: center;
+}
 .dropdown-menu-item {
     text-align: center;
 }
 .navbar {
-    background-color: #888888;
-    border-color: #202020;
+    background-image: linear-gradient(-60deg, rgba(230, 119, 0, 1), rgba(255, 0, 0, 0) 50%, rgba(230, 119, 0, 1));
+    border: none;
+    border-radius: 0px 0px 20px  20px;
 }
 .navbar-container {
     padding-right:2%;
@@ -103,10 +115,11 @@ input[type="checkbox"].input-validation-error {
 .navbar-nav > li {
     margin: 0 3%;
 }
-#green {
-    height: 145px;
-}
+.aside-menu {
+    float:none !important;
+    width:100%;
 
+}
 #movedown {
     margin-top: 20px;
 }
@@ -131,16 +144,37 @@ input[type="checkbox"].input-validation-error {
     margin:auto;
 }
 .custom-container {
+    min-height: 100vh;
+    overflow: auto;
     padding-right: 15px;
     padding-left: 15px;
-    max-width: 90%;
-    margin:auto;
+    max-width: 95%;
+    padding-bottom: 15em;
+    margin: auto;
 }
 #tableImage {
     height:15em;
     object-fit:fill;
 
 }
+
+.footer-social {
+    text-align:center;
+    font-weight:bold;
+    font-size:2em;
+}
+
+footer .block{
+    color:white !important;
+}
+
+
+.sliderImage {
+    height: 9em;
+    width: 16em;
+    object-fit: contain;
+}
+
 
 .custom-container h2{
     text-align: center;
