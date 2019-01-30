@@ -40,22 +40,17 @@
     <!-- LOGO Start
     ================================================== -->
 
-    <header>
+    <header class="fadeIn">
         <div>
             <img class="banner-image" src="~/Source_Material/809899287.jpg" />
         </div>	<!-- End of /.container -->
     </header> <!-- End of /Header -->
     <!-- MENU Start
     ================================================== -->
-    <nav class="navbar navbar-container navbar-top">
-        <div class="container">
+    <nav class="navbar navbar-container navbar-top fadeIn">
+        <div>
             <div class="navbar-header">
-                <button id="nav-icon3" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <button id="nav-icon3" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
             </div> <!-- End of /.navbar-header -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav nav-main">
@@ -73,8 +68,10 @@
                         </ul>
                     </li>
                     <li><a href="#">SPECIALS</a></li>
-                    <li>
-                        <a href="~/Home/Index" class="logo">Wild Tiger Thai Restaurant and Bar</a>
+                    <li class="logoHolder">
+                        <a class="noPad" href="~/Home/Index">
+                            <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
+                        </a>
                     </li>
                     <li><a href="~/Home/Contact">CONTACT</a></li>
                     <li class="dropdown">
@@ -90,15 +87,16 @@
     </nav>	<!-- End of /.nav -->
     <div class="custom-container">
         @RenderBody()
-        <aside>
+        <aside class="fadeIn">
             <section id="features">
-                <div class="container">
+                <span class="fa fa-minus-square closeBtn" onclick="toggleMenu()"></span>
+                <div id="floatingMenu" class="container">
                     <div class="row">
                         <div class="col-md-4 aside-menu">
-                            <div class="block">
+                            <div class="block topBorder">
                                 <div class="media">
                                     <div id="movedown" class="pull-left" href="#">
-                                        <img  style="padding-left:2em;"src="~/Content/Images/take-away (64).png" />
+                                        <img style="padding-left:2em;" src="~/Content/Images/take-away (64).png" />
                                     </div>
                                     <div class="media-body">
                                         <h4 class="media-heading center">Order Online</h4>
@@ -114,7 +112,7 @@
                     </div>	<!-- End of /.row -->
                     <div class="row">
                         <div class="col-md-4 aside-menu">
-                            <div class="block">
+                            <div class="block bottomBorder">
                                 <div id="green" class="media">
                                     <div id="movedown" class="pull-left" href="#">
                                         <i class=" fa fa-hourglass-half"></i>
@@ -135,14 +133,14 @@
                 </div>	<!-- End of /.container -->
             </section>	<!-- End of section -->
         </aside>
-    </div>    
-    <footer class="footer-bottom">
+    </div>
+    <footer class="footer-bottom fadeIn">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="block">
                         <a href="#" class="footer-logo">
-                            <img class="sliderImage" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
+                            <img class="footerImage" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
                         </a>
                         <p>
                             We are bringing new Thai flavor dishes to the South East of Vancouver, WA.
@@ -173,7 +171,7 @@
         </div> <!-- End Of /.Container -->
     </footer> <!-- End Of Footer -->
 
-    <a id="back-top" href="#"></a>
+    <a class="fadeIn" id="back-top" href="#"></a>
     <script>
         $(document).ready(function () {
             $('.table').DataTable();
@@ -189,6 +187,73 @@
             $('#mobile').css("display", "block");
             $('#desktop').css("display", "none");
         }
+        (function ($) {
+            $.fn.visible = function (partial) {
+
+                var $t = $(this),
+                    $w = $(window),
+                    viewTop = $w.scrollTop(),
+                    viewBottom = viewTop + $w.height(),
+                    _top = $t.offset().top,
+                    _bottom = _top + $t.height(),
+                    compareTop = partial === true ? _bottom : _top,
+                    compareBottom = partial === true ? _top : _bottom;
+
+                return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+            };
+
+        })(jQuery);
+        $(window).load(function (event) {
+
+            $(".rightAlign").each(function (i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.removeClass("hideMe");
+                    el.first().addClass("fromRight");
+                }
+            });
+            $(".leftAlign").each(function (i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.removeClass("hideMe");
+                    el.first().addClass("fromLeft");
+                }
+            });
+
+
+        });
+
+        $(window).scroll(function (event) {
+
+            $(".rightAlign").each(function (i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.removeClass("hideMe");
+                    el.first().addClass("fromRight");
+                }
+            });
+            $(".leftAlign").each(function (i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.removeClass("hideMe");
+                    el.first().addClass("fromLeft");
+                }
+            });
+
+
+        });
+
+
+        function toggleMenu() {
+            var menu = $("#floatingMenu");
+            if (menu.css("display") == "block") {
+                $("#floatingMenu").css("display", "none");
+            }
+            else {
+                $("#floatingMenu").css("display", "block");
+            }
+        };
     </script>
     @RenderSection("scripts", false)
 </body>
