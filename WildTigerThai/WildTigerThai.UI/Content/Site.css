@@ -73,8 +73,23 @@ input[type="checkbox"].input-validation-error {
 }
 .logo {
     height:6em;
-    width:30em;
+    max-width:100%;
     object-fit:contain;
+}
+.mobileNavButtonLeft{
+    top:1.5em;
+    margin:auto;
+    padding-right:18.1%;
+    font-weight: bold;
+}
+.mobileNavButtonRight {
+    top: 1.5em;
+    margin: auto;
+    padding-left: 15.1%;
+    font-weight: bold;
+}
+.mobileLink{
+    color:black;
 }
 .noPad {
     padding:0 !important;
