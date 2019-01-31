@@ -83,17 +83,10 @@
     </nav>	<!-- End of /.nav -->
     <nav class="navbar navbar-container navbar-top fadeIn mobile">
         <div>
-            <ul class="nav nav-pills">
-                <li class="mobileNavButtonLeft"><a class="mobileLink" href="#">MENU</a></li>
-                <li class="logoHolder">
-                    <a class="noPad" href="~/Home/Index">
-                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
-                    </a>
-                </li>
-                <li>
-                    @Html.Partial("_loginPartial")
-                </li>
-
+            <ul class="nav nav-pills nav-main">
+                <li class="margin4"><a class="mobileLink largeHead" href="~/Home/Index">Wild Tiger Thai Restaurant</a></li>
+                <li><a class="mobileLink" href="#">Menu</a></li>
+                @Html.Partial("_loginPartial")
             </ul> <!-- End of /.nav-main -->
         </div>	<!-- /.container-fluid -->
     </nav>	<!-- End of /.nav -->

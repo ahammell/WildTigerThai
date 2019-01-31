@@ -33,7 +33,7 @@
                             var base64 = Convert.ToBase64String(item.File);
                             var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
                         }
-                        <img id="tableImage" src="@imgSrc" />
+                        <img class="tableImage" src="@imgSrc" />
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.PhotoType.Type)
@@ -56,7 +56,7 @@
             <table class="full-border">
                 <tr>
                     <td>
-                        <img id="tableImage" src="@imgSrc" />
+                        <img class="tableImage" src="@imgSrc" />
                     </td>
                     <td>
                         <b>@Html.DisplayNameFor(model => model.PhotoType.Type):</b>
