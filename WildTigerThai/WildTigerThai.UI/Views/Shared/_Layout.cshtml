@@ -8,6 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
     <!-- Css -->
+    <link rel="stylesheet" href="~/Content/reset.css" />
     <link rel="stylesheet" href="~/Content/nivo-slider.css" type="text/css" />
     <link rel="stylesheet" href="~/Content/owl.carousel.css">
     <link rel="stylesheet" href="~/Content/owl.theme.css">
@@ -47,49 +48,61 @@
     </header> <!-- End of /Header -->
     <!-- MENU Start
     ================================================== -->
-    <nav class="navbar navbar-container navbar-top fadeIn">
+    <nav class="navbar navbar-container navbar-top fadeIn desktop">
         <div>
-            <div class="navbar-header">
-                <button id="nav-icon3" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></button>
-            </div> <!-- End of /.navbar-header -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav nav-main">
-                    <li class="dropdown ">
-                        MENU
-                        <ul class="dropdown-menu dropdown-menu-center ">
-                            <li><a class="dropdown-menu-item">APPETIZERS</a></li>
-                            <li><a class="dropdown-menu-item">STIR FRIED</a></li>
-                            <li><a class="dropdown-menu-item">NOODLES</a></li>
-                            <li><a class="dropdown-menu-item">CURRIES</a></li>
-                            <li><a class="dropdown-menu-item">FRIED RICE</a></li>
-                            <li><a class="dropdown-menu-item">SIDES</a></li>
-                            <li><a class="dropdown-menu-item">MENU DOWNLOAD</a></li>
+            <ul class="nav navbar-nav nav-main">
+                <li class="dropdown ">
+                    <a href="#">MENU</a>
+                    <ul class="dropdown-menu dropdown-menu-center ">
+                        <li><a class="dropdown-menu-item">APPETIZERS</a></li>
+                        <li><a class="dropdown-menu-item">STIR FRIED</a></li>
+                        <li><a class="dropdown-menu-item">NOODLES</a></li>
+                        <li><a class="dropdown-menu-item">CURRIES</a></li>
+                        <li><a class="dropdown-menu-item">FRIED RICE</a></li>
+                        <li><a class="dropdown-menu-item">SIDES</a></li>
+                        <li><a class="dropdown-menu-item">MENU DOWNLOAD</a></li>
 
-                        </ul>
-                    </li>
-                    <li><a href="#">SPECIALS</a></li>
-                    <li class="logoHolder">
-                        <a class="noPad" href="~/Home/Index">
-                            <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
-                        </a>
-                    </li>
-                    <li><a href="~/Home/Contact">CONTACT</a></li>
-                    <li class="dropdown">
-                        ACCOUNT
-                        <ul class="dropdown-menu dropdown-menu-center ">
-                            @Html.Partial("_loginPartial")
-                        </ul>
-                    </li>
+                    </ul>
+                </li>
+                <li><a href="#">SPECIALS</a></li>
+                <li class="logoHolder">
+                    <a class="noPad" href="~/Home/Index">
+                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
+                    </a>
+                </li>
+                <li><a href="~/Home/Contact">CONTACT</a></li>
+                <li class="dropdown">
+                    <a href="#">ACCOUNT</a>
+                    <ul class="dropdown-menu dropdown-menu-center ">
+                        @Html.Partial("_loginPartial")
+                    </ul>
+                </li>
 
-                </ul> <!-- End of /.nav-main -->
-            </div>	<!-- /.navbar-collapse -->
+            </ul> <!-- End of /.nav-main -->
         </div>	<!-- /.container-fluid -->
     </nav>	<!-- End of /.nav -->
+    <nav class="navbar navbar-container navbar-top fadeIn mobile">
+        <div>
+            <ul class="nav nav-pills">
+                <li class="mobileNavButtonLeft"><a class="mobileLink" href="#">MENU</a></li>
+                <li class="logoHolder">
+                    <a class="noPad" href="~/Home/Index">
+                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
+                    </a>
+                </li>
+                <li>
+                    @Html.Partial("_loginPartial")
+                </li>
+
+            </ul> <!-- End of /.nav-main -->
+        </div>	<!-- /.container-fluid -->
+    </nav>	<!-- End of /.nav -->
+
     <div class="custom-container">
         @RenderBody()
-        <aside class="fadeIn">
+        <aside class="fadeIn desktop">
             <section id="features">
-                <span class="fa fa-minus-square closeBtn" onclick="toggleMenu()"></span>
+                <span id="menuButton" class="fa fa-plus-square closeBtn" onclick="toggleMenu()"></span>
                 <div id="floatingMenu" class="container">
                     <div class="row">
                         <div class="col-md-4 aside-menu">
@@ -134,7 +147,7 @@
             </section>	<!-- End of section -->
         </aside>
     </div>
-    <footer class="footer-bottom fadeIn">
+    <footer class="footer-bottom fadeIn desktop">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -180,12 +193,13 @@
         let width = $(window).width();
         let height = $(window).height();
 
-        $('#mobile').css("display", "none");
-        $('#desktop').css("display", "block");
+        $('.mobile').css("display", "none");
+        $('.desktop').css("display", "block");
+        $('#floatingMenu').css("display", "none");
 
         if (width <= 1242 && height <= 2436) {
-            $('#mobile').css("display", "block");
-            $('#desktop').css("display", "none");
+            $('.mobile').css("display", "block");
+            $('.desktop').css("display", "none");
         }
         (function ($) {
             $.fn.visible = function (partial) {
@@ -249,9 +263,15 @@
             var menu = $("#floatingMenu");
             if (menu.css("display") == "block") {
                 $("#floatingMenu").css("display", "none");
+                $("#menuButton").removeClass("fa-minus-square");
+                $("#menuButton").addClass("fa-plus-square");
+
             }
             else {
                 $("#floatingMenu").css("display", "block");
+                $("#menuButton").removeClass("fa-plus-square");
+                $("#menuButton").addClass("fa-minus-square");
+
             }
         };
     </script>

@@ -279,6 +279,7 @@
     <Content Include="Content\nivo-slider.css" />
     <Content Include="Content\owl.carousel.css" />
     <Content Include="Content\owl.theme.css" />
+    <Content Include="Content\reset.css" />
     <Content Include="Content\responsive.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
