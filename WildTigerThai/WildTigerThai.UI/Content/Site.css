@@ -267,7 +267,7 @@ footer .block{
     margin-bottom: 20px;
 }
 
-#mobile #tableImage{
+.mobile #tableImage{
     margin: 10px;
 }
 
@@ -392,4 +392,8 @@ aside .closeBtn {
 
 .full-border tbody tr td a i {
     font-size:30px;
+}
+
+.full-border tbody tr td {
+    vertical-align: middle !important;
 }
