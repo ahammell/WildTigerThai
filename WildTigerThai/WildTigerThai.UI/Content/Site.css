@@ -161,10 +161,9 @@ input[type="checkbox"].input-validation-error {
     margin: auto;
 }
 #tableImage {
-    width: 20%;
-    height:auto;
-    object-fit:fill;
-
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
 }
 
 .footer-social {
@@ -376,3 +375,6 @@ aside .closeBtn {
     }
 }
 
+.full-border tbody tr td a i {
+    font-size:30px;
+}
