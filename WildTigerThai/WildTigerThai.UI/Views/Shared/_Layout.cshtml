@@ -91,7 +91,7 @@
         @RenderBody()
         <aside class="fadeIn desktop">
             <section id="features">
-                <span id="menuButton" class="bag closeBtn" onclick="toggleMenu()"></span>
+                <span id="menuButton" class="fa fa-cutlery closeBtn" onclick="toggleMenu()"></span>
                 <div id="floatingMenu" class="container">
                     <div class="row">
                         <div class="col-md-4 aside-menu">
@@ -252,14 +252,14 @@
             var menu = $("#floatingMenu");
             if (menu.css("display") == "block") {
                 $("#floatingMenu").css("display", "none");
-                $("#menuButton").removeClass("fa fa-times");
-                $("#menuButton").addClass("bag");
+                $("#menuButton").removeClass("fa-times");
+                $("#menuButton").addClass("fa-cutlery");
 
             }
             else {
                 $("#floatingMenu").css("display", "block");
-                $("#menuButton").removeClass("bag");
-                $("#menuButton").addClass("fa fa-times");
+                $("#menuButton").removeClass("fa-cutlery");
+                $("#menuButton").addClass("fa-times");
 
             }
         };

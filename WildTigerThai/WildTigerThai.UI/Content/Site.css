@@ -68,11 +68,11 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
-.logoHolder{
-    margin-right:30%;
-    max-width:30%;
-    right:5%;
-    bottom:25px;
+.logoHolder {
+    margin-right: 30% !important;
+    max-width: 30%;
+    right: 5%;
+    bottom: 25px;
 }
 .logo {
     height:250px;
@@ -167,6 +167,9 @@ input[type="checkbox"].input-validation-error {
     padding-left:2%;
     margin-left:0;
     margin-right:0;
+}
+.navbar-nav > li {
+    margin: 0;
 }
 .aside-menu {
     float:none !important;
@@ -379,11 +382,6 @@ aside .closeBtn {
     top: 5px;
     left: 20px;
     z-index: 101;
-}
-.bag{
-    background:url('../Content/Images/take-away (32).png');
-    width: 32px;
-    height: 32px;
 }
 .fa{
     font-size:32px !important;
