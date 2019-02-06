@@ -69,8 +69,10 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 .logoHolder{
+    margin-right:30%;
     max-width:30%;
-    right:3%;
+    right:5%;
+    bottom:25px;
 }
 .logo {
     height:250px;
@@ -165,9 +167,6 @@ input[type="checkbox"].input-validation-error {
     padding-left:2%;
     margin-left:0;
     margin-right:0;
-}
-.navbar-nav > li {
-    margin: 0 3%;
 }
 .aside-menu {
     float:none !important;
