@@ -49,25 +49,31 @@
     </table>
 </div>
 <div class="mobile">
-        @foreach (var item in Model)
-        {
-            var base64 = Convert.ToBase64String(item.File);
-            var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
-            <table class="full-border">
-                <tr>
-                    <td>
-                        <img id="tableImage" src="@imgSrc" />
-                    </td>
-                    <td>
-                        <b>@Html.DisplayNameFor(model => model.PhotoType.Type):</b>
-                        @Html.DisplayFor(modelItem => item.PhotoType.Type)
-                    </td>
-                    <td>
-                        <a href="@Url.Action("Edit", "Edit", new { id = item.Photo_ID })"><i class="fa fa-pencil"></i></a><br />
-                        <a href="@Url.Action("Details", "Details", new { id = item.Photo_ID })"><i class="fa fa-info-circle"></i></a><br />
-                        <a href="@Url.Action("Delete", "Delete", new { id = item.Photo_ID })"><i class="fa fa-trash"></i></a>
-                    </td>
-                </tr>
-            </table>
-        }
-    </div>
+    <p>
+        @Html.ActionLink("Admin Panel", "AdminDashboard", "Home", null, new { @class = "btn btn-warning mobile-button", @role = "button" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning mobile-button2", @role = "button"})
+    </p>
+    @foreach (var item in Model)
+    {
+        var base64 = Convert.ToBase64String(item.File);
+        var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
+        <table class="full-border">
+            <tr>
+                <td>
+                    <img id="tableImage" src="@imgSrc" />
+                </td>
+                <td>
+                    <b>@Html.DisplayNameFor(model => model.PhotoType.Type):</b>
+                    @Html.DisplayFor(modelItem => item.PhotoType.Type)
+                </td>
+                <td class="mobile-links">
+                    <a href="@Url.Action("Photos", "Edit", new { id = item.Photo_ID })"><i class="fa fa-pencil"></i></a><br />
+                    <a href="@Url.Action("Photos", "Details", new { id = item.Photo_ID })"><i class="fa fa-info-circle"></i></a><br />
+                    <a href="@Url.Action("Photos", "Delete", new { id = item.Photo_ID })"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        </table>
+    }
+</div>

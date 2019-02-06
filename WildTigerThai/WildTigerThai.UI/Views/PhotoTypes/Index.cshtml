@@ -4,42 +4,70 @@
     ViewBag.Title = "Photo Types";
 }
 
-<h2 class="center">@ViewBag.Title</h2>
-<p>
-    @Html.ActionLink("Admin Panel", "AdminDashboard", "Home", null, new { @class = "btn btn-warning", @role = "button", @style = "width:8em; float:left;" })
-</p>
-<p>
-    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning", @role = "button", @style = "width:8em; clear:right;" })
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Active)
-            </th>
-            <th></th>
-        </tr>
-
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="desktop">
+    <h2 class="center">@ViewBag.Title</h2>
+    <p>
+        @Html.ActionLink("Admin Panel", "AdminDashboard", "Home", null, new { @class = "btn btn-warning", @role = "button", @style = "width:8em; float:left;" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning", @role = "button", @style = "width:8em; clear:right;" })
+    </p>
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-                <td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Active)
+                </th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Active)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.PhotoType_ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.PhotoType_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.PhotoType_ID })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="mobile">
+    <p>
+        @Html.ActionLink("Admin Panel", "AdminDashboard", "Home", null, new { @class = "btn btn-warning mobile-button", @role = "button" })
+    </p>
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning mobile-button2", @role = "button" })
+    </p>
+    @foreach (var item in Model)
+    {
+        <table class="full-border">
+            <tr>
+                <td class="phototype-content">
+                    <b>@Html.DisplayNameFor(model => model.Type):</b>
+                    @Html.DisplayFor(modelItem => item.Type)<br />
+                    <b>@Html.DisplayNameFor(model => model.Active):</b>
                     @Html.DisplayFor(modelItem => item.Active)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.PhotoType_ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.PhotoType_ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.PhotoType_ID })
+                <td class="mobile-links">
+                    <a href="@Url.Action("PhotoTypes", "Edit", new { id = item.PhotoType_ID })"><i class="fa fa-pencil"></i></a><br />
+                    <a href="@Url.Action("PhotoTypes", "Details", new { id = item.PhotoType_ID })"><i class="fa fa-info-circle"></i></a><br />
+                    <a href="@Url.Action("PhotoTypes", "Delete", new { id = item.PhotoType_ID })"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
-        }
-    </tbody>
-</table>
+        </table>
+    }
+</div>

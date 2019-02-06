@@ -166,6 +166,9 @@ input[type="checkbox"].input-validation-error {
     width: 20em;
     margin:auto;
 }
+.mobile .grid-item{
+    margin-bottom: 20px;
+}
 .custom-container {
     min-height: 100vh;
     overflow: auto;
@@ -391,9 +394,31 @@ aside .closeBtn {
 }
 
 .full-border tbody tr td a i {
-    font-size:30px;
+    font-size:44px;
 }
 
 .full-border tbody tr td {
     vertical-align: middle !important;
+}
+
+.mobile-button2 {
+    float: right;
+    width: 8em;
+    clear: right;
+    margin-bottom: 10px;
+}
+
+.mobile-button {
+    width: 8em;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.phototype-content{
+    padding-left:20px;
+}
+
+.mobile-links{
+    float:right;
+    padding-right:20px;
 }
