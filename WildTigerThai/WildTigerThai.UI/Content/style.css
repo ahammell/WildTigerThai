@@ -1,6 +1,11 @@
 /*------------- Common-CSS----------------*/
 
-body { font-family: 'Lato', sans-serif; color: #555; font-size: 14px; font-weight: 300; }
+body {
+    font-family: 'Miltonian Tattoo', cursive;
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+}
 li { list-style: none;}
 a:hover { text-decoration: none; }
 
@@ -235,7 +240,7 @@ section+section { margin-top: 50px; }
 	-moz-transform: translateY(10px);
 	transform: translateY(10px);
 }
-.nav-main > li::before, 
+/*.nav-main > li::before, 
 .nav-main > li::after {
 	position: absolute;
 	left: 0;
@@ -247,7 +252,7 @@ section+section { margin-top: 50px; }
 	-webkit-transition: opacity 0.3s, 
 	-webkit-transform 0.3s;
 	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;*/
 }
 .nav-main > li:hover:before,
 .nav-main > li:hover:after{
@@ -257,17 +262,21 @@ section+section { margin-top: 50px; }
 	transform: translateY(0px);	
 }
 .nav-main > li a:hover, .nav-main > li a:focus {
-	color: black;
+	color: white;
 }
 .nav-main > li a {
     padding: 20px 15px;
     color: black;
     font-weight:bold;
-    font-size: 17px;
+    font-size: 28px;
 }
 .navbar-nav {
 	float: none;
 	text-align: center;
+}
+.nav-pills {
+    float: none;
+    text-align: center;
 }
 
 .navbar-nav>li {

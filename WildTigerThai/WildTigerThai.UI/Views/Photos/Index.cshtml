@@ -33,7 +33,7 @@
                             var base64 = Convert.ToBase64String(item.File);
                             var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
                         }
-                        <img id="tableImage" src="@imgSrc" />
+                        <img class="tableImage" src="@imgSrc" />
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.PhotoType.Type)
@@ -49,6 +49,7 @@
     </table>
 </div>
 <div class="mobile">
+<<<<<<< HEAD
     <p>
         @Html.ActionLink("Admin Panel", "AdminDashboard", "Home", null, new { @class = "btn btn-warning mobile-button", @role = "button" })
     </p>

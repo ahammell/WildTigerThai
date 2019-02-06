@@ -244,6 +244,7 @@
     <Content Include="Content\Images\company-9.png" />
     <Content Include="Content\Images\food-ad.png" />
     <Content Include="Content\Images\footer-logo.png" />
+    <Content Include="Content\Images\img_0181.jpg" />
     <Content Include="Content\Images\kewledits.weebly %28120%29.png" />
     <Content Include="Content\Images\large_left.png" />
     <Content Include="Content\Images\large_right.png" />
@@ -264,6 +265,7 @@
     <Content Include="Content\Images\product-item-2.jpg" />
     <Content Include="Content\Images\product-item.jpg" />
     <Content Include="Content\Images\search.png" />
+    <Content Include="Content\Images\ShrimpFriedRice.jpg" />
     <Content Include="Content\Images\single-product.png" />
     <Content Include="Content\Images\slider.jpg" />
     <Content Include="Content\Images\slider1.jpg" />
@@ -271,6 +273,7 @@
     <Content Include="Content\Images\take-away %2832%29.png" />
     <Content Include="Content\Images\take-away %2864%29.png" />
     <Content Include="Content\Images\take-away.png" />
+    <Content Include="Content\Images\Thai-Food.jpg" />
     <Content Include="Content\Images\titleBorder.png" />
     <Content Include="Content\Images\top.png" />
     <Content Include="Content\Images\Visa-Electron.png" />

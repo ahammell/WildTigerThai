@@ -1,31 +1,32 @@
-﻿    @if (Request.IsAuthenticated)
+﻿@if (Request.IsAuthenticated)
+{
+    <li class="desktop">
+        @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "dropdown-menu-item" })
+    </li>
+    <li class="mobile">
+        <a href="@Url.Action("Index", "Manage", routeValues: null)" class="mobileLink">Account</a>
+    </li>
+    if (User.IsInRole("Administrator"))
     {
-        <li class="desktop">
-            @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "dropdown-menu-item" })
-        </li>
-        <li class="mobile mobileNavButtonRight">
-            @Html.ActionLink("Manage", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "mobileLink"})
-        </li>
-        if (User.IsInRole("Administrator"))
-        {
         <li class="desktop">
             <a href="~/Home/AdminDashboard">ADMIN</a>
         </li>
-        }
-        <li class="desktop">
-            <a class="dropdown-menu-item" href="javascript:document.getElementById('logoutForm').submit()">
-                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", style = "display: inline-block;", @class = "dropdown-menu-item" }))
-                {
-                    @Html.AntiForgeryToken()
+    }
+    <li class="desktop">
+        <a class="dropdown-menu-item" href="javascript:document.getElementById('logoutForm').submit()">
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", style = "display: inline-block;", @class = "dropdown-menu-item" }))
+            {
+                @Html.AntiForgeryToken()
 
-                }
-                Log Off
-            </a>
-        </li>
-       }
+            }
+            Log Off
+        </a>
+    </li>
+}
 else
 {
     <li class="desktop">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "dropdown-menu-item" })</li>
     <li class="desktop">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "dropdown-menu-item" })</li>
+    <li class="mobile">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "mobileLink" })/@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "mobileLink" })</li>
 }
 

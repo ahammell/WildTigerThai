@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Miltonian+Tattoo' rel='stylesheet' type='text/css'>
     <!-- Css -->
     <link rel="stylesheet" href="~/Content/reset.css" />
     <link rel="stylesheet" href="~/Content/nivo-slider.css" type="text/css" />
@@ -38,40 +38,31 @@
 </head>
 <body>
 
-    <!-- LOGO Start
-    ================================================== -->
-
-    <header class="fadeIn">
-        <div>
-            <img class="banner-image" src="~/Source_Material/809899287.jpg" />
-        </div>	<!-- End of /.container -->
-    </header> <!-- End of /Header -->
-    <!-- MENU Start
-    ================================================== -->
+    <!-- MENU Start -->
     <nav class="navbar navbar-container navbar-top fadeIn desktop">
-        <div>
+        <div class="navdiv">
             <ul class="nav navbar-nav nav-main">
-                <li class="dropdown ">
+                <li class="logoHolder">
+                    <a class="noPad" href="~/Home/Index">
+                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
+                    </a>
+                </li>
+                <li class="dropdown movedownnav">
                     <a href="#">MENU</a>
                     <ul class="dropdown-menu dropdown-menu-center ">
-                        <li><a class="dropdown-menu-item">APPETIZERS</a></li>
-                        <li><a class="dropdown-menu-item">STIR FRIED</a></li>
-                        <li><a class="dropdown-menu-item">NOODLES</a></li>
-                        <li><a class="dropdown-menu-item">CURRIES</a></li>
-                        <li><a class="dropdown-menu-item">FRIED RICE</a></li>
-                        <li><a class="dropdown-menu-item">SIDES</a></li>
-                        <li><a class="dropdown-menu-item">MENU DOWNLOAD</a></li>
+                        <li><a class="dropdown-menu-item" href="#">APPETIZERS</a></li>
+                        <li><a class="dropdown-menu-item" href="#">STIR FRIED</a></li>
+                        <li><a class="dropdown-menu-item" href="#">NOODLES</a></li>
+                        <li><a class="dropdown-menu-item" href="#">CURRIES</a></li>
+                        <li><a class="dropdown-menu-item" href="#">FRIED RICE</a></li>
+                        <li><a class="dropdown-menu-item" href="#">SIDES</a></li>
+                        <li><a class="dropdown-menu-item" href="#">MENU DOWNLOAD</a></li>
 
                     </ul>
                 </li>
-                <li><a href="#">SPECIALS</a></li>
-                <li class="logoHolder">
-                    <a class="noPad" href="~/Home/Index">
-                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
-                    </a>
-                </li>
-                <li><a href="~/Home/Contact">CONTACT</a></li>
-                <li class="dropdown">
+                <li class="movedownnav"><a href="#">SPECIALS</a></li>
+                <li class="movedownnav"><a href="~/Home/Contact">CONTACT</a></li>
+                <li class="dropdown movedownnav">
                     <a href="#">ACCOUNT</a>
                     <ul class="dropdown-menu dropdown-menu-center ">
                         @Html.Partial("_loginPartial")
@@ -81,28 +72,26 @@
             </ul> <!-- End of /.nav-main -->
         </div>	<!-- /.container-fluid -->
     </nav>	<!-- End of /.nav -->
-    <nav class="navbar navbar-container navbar-top fadeIn mobile">
-        <div>
-            <ul class="nav nav-pills">
-                <li class="mobileNavButtonLeft"><a class="mobileLink" href="#">MENU</a></li>
-                <li class="logoHolder">
-                    <a class="noPad" href="~/Home/Index">
-                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_words.png" />
-                    </a>
-                </li>
-                <li>
-                    @Html.Partial("_loginPartial")
-                </li>
-
+    <div class="fadeIn mobile">
+        <nav class="navbar navbar-container navbar-top ">
+            <div class="mobileLogoHolder">
+                <a class="noPad" href="~/Home/Index">
+                    <img class="mobileLogo" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
+                </a>
+            </div>
+            <ul class="nav navbar-nav mobileNav">
+                <li><a class="mobileLink" href="#">Menu</a></li>
+                <li><a class="mobileLink" href="~/Home/Contact">Contact</a></li>
+                @Html.Partial("_loginPartial")
             </ul> <!-- End of /.nav-main -->
-        </div>	<!-- /.container-fluid -->
-    </nav>	<!-- End of /.nav -->
+        </nav>
+    </div>	<!-- End of /.nav -->
 
     <div class="custom-container">
         @RenderBody()
         <aside class="fadeIn desktop">
             <section id="features">
-                <span id="menuButton" class="fa fa-plus-square closeBtn" onclick="toggleMenu()"></span>
+                <span id="menuButton" class="fa fa-cutlery closeBtn" onclick="toggleMenu()"></span>
                 <div id="floatingMenu" class="container">
                     <div class="row">
                         <div class="col-md-4 aside-menu">
@@ -263,14 +252,14 @@
             var menu = $("#floatingMenu");
             if (menu.css("display") == "block") {
                 $("#floatingMenu").css("display", "none");
-                $("#menuButton").removeClass("fa-minus-square");
-                $("#menuButton").addClass("fa-plus-square");
+                $("#menuButton").removeClass("fa-times");
+                $("#menuButton").addClass("fa-cutlery");
 
             }
             else {
                 $("#floatingMenu").css("display", "block");
-                $("#menuButton").removeClass("fa-plus-square");
-                $("#menuButton").addClass("fa-minus-square");
+                $("#menuButton").removeClass("fa-cutlery");
+                $("#menuButton").addClass("fa-times");
 
             }
         };
