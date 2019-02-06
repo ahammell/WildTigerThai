@@ -5,11 +5,12 @@
     height: 100%;
 }
 aside {
-    display:block;
-    z-index:100;
-    position:fixed;
-    left:-0.9em;
-    top:19.4em;
+    display: block;
+    z-index: 100;
+    position: fixed;
+    left: -0.9em;
+    top: 19.4em;
+    -webkit-user-select: none;
 }
 
 /*Scrollbar CSS*/
@@ -69,27 +70,26 @@ input[type="checkbox"].input-validation-error {
 }
 .logoHolder{
     max-width:30%;
+    right:3%;
 }
 .logo {
-    height:6em;
+    height:250px;
     max-width:100%;
     object-fit:contain;
 }
+.mobileLogoHolder {
+    max-width: 40%;
+    right: 1em;
+    top: 1em;
+    margin-right: 0px !important;
+    float:left;
+    margin-top:1em;
+}
 .mobileLogo {
     padding-right:0px !important;
-    height:50px;
-    width: 150px;
+    max-width: 100%;
     margin:auto;
     top: 1em;
-}
-.nav-pills > li {
-    margin: 0 3%;
-}
-.nav-pills.nav-main > li a {
-    padding:2px 15px;
-}
-.nav-pills .nav-main > li::before, .nav-main > li::after {
-    background: none;
 }
 .largeHead{
     font-size:26px !important;
@@ -108,15 +108,14 @@ input[type="checkbox"].input-validation-error {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
-
-.mobileNavButtonLeft {
-    font-weight: bold;
-}
-.mobileNavButtonRight {
-    font-weight: bold;
+.mobileNav {
+    text-align: right;
+    max-width: 5em;
+    padding-left: 75%;
 }
 .mobileLink{
-    color:black;
+    color:white;
+    font-size:18px;
 }
 .noPad {
     padding:0 !important;
@@ -134,13 +133,14 @@ input[type="checkbox"].input-validation-error {
     -o-transform: translate(-50%, 0) !important;
     transform: translate(-50%, 0) !important;
 }
-
+.dropdown-menu{
+    top:70%;
+}
 .dropdown:hover {
     background-color: none;
     color: black;
 }
 .dropdown {
-    padding: 20px 15px;
     color: black;
     font-weight: bold;
 }
@@ -151,9 +151,14 @@ input[type="checkbox"].input-validation-error {
     text-align: center;
 }
 .navbar {
-    background-image: linear-gradient(-60deg, rgba(230, 119, 0, 1), rgba(255, 0, 0, 0) 50%, rgba(230, 119, 0, 1));
-    border: none;
-    border-radius: 0px 0px 20px  20px;
+    background: url(../Content/Images/Thai-Food.jpg) no-repeat bottom;
+    background-size: cover;
+}
+.navdiv{
+    margin-top:1%;
+}
+.movedownnav{
+    vertical-align:bottom;
 }
 .navbar-container {
     padding-right:2%;
@@ -351,14 +356,16 @@ footer .block{
     font-weight:bold;
 }
 .fixLeft {
-    text-align:left;
-    position:absolute;
-    top:77.5%;
+    text-align: right;
+    top:15em;
+    left:15em;
 }
 .fixRight {
-    text-align: right;
-    position: absolute;
-    top: 60%;
+    float:right;
+    text-align: left;
+    bottom: 40em;
+    right: 15em;
+    clear: both;
 }
 
 .topBorder {
@@ -374,8 +381,14 @@ aside .closeBtn {
     left: 20px;
     z-index: 101;
 }
-
-
+.bag{
+    background:url('../Content/Images/take-away (32).png');
+    width: 32px;
+    height: 32px;
+}
+.fa{
+    font-size:32px !important;
+}
 
 @keyframes fadein {
     from {

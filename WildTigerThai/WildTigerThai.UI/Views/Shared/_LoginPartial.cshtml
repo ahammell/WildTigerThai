@@ -3,8 +3,8 @@
     <li class="desktop">
         @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "dropdown-menu-item" })
     </li>
-    <li class="mobile" style="margin-left:55%; margin-right:0;">
-        <a href="@Url.Action("Index", "Manage", routeValues: null)" class="mobileLink">Manage</a>
+    <li class="mobile">
+        <a href="@Url.Action("Index", "Manage", routeValues: null)" class="mobileLink">Account</a>
     </li>
     if (User.IsInRole("Administrator"))
     {
