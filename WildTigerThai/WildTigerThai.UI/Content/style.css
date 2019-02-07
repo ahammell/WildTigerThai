@@ -294,7 +294,7 @@ section+section { margin-top: 50px; }
 .nav-main .dropdown-menu li a {
 	color: #555;
 	padding: 6px 10px;
-
+    font-size:20px;
 }
 .nav-main .dropdown-menu li:hover {
 	color: #fff;
@@ -309,6 +309,7 @@ section+section { margin-top: 50px; }
 }
 .nav-main .dropdown-menu li a:hover {
 	color: #fff;
+    text-shadow: 1px 1px black;
 	background: #e67700;
 }
 .navbar-default .navbar-nav>.open>a,

@@ -109,14 +109,13 @@ input[type="checkbox"].input-validation-error {
     margin-right: 0 !important;
 }
 .mobileNav {
-    text-align: right;
-    max-width: 5em;
-    padding-left: 75%;
+    text-align:right;
+    padding-left: 65%;
 }
 .mobileLink {
     font-family: 'Shojumaru', cursive;
     font-weight: 100;
-    color: red;
+    color: black;
     font-size: 20px;
     text-shadow: 1px 1px lightgray;
 }
