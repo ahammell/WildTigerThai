@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Miltonian+Tattoo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kalam|Shojumaru' rel='stylesheet' type='text/css'>
     <!-- Css -->
     <link rel="stylesheet" href="~/Content/reset.css" />
     <link rel="stylesheet" href="~/Content/nivo-slider.css" type="text/css" />
@@ -44,11 +44,11 @@
             <ul class="nav navbar-nav nav-main">
                 <li class="logoHolder">
                     <a class="noPad" href="~/Home/Index">
-                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
+                        <img class="logo" src="~/Source_Material/wild_tiger_thai_logo/proper_tiger_and_words.png" />
                     </a>
                 </li>
                 <li class="dropdown movedownnav">
-                    <a href="#">MENU</a>
+                    <a href="#">Menu</a>
                     <ul class="dropdown-menu dropdown-menu-center ">
                         <li><a class="dropdown-menu-item" href="#">APPETIZERS</a></li>
                         <li><a class="dropdown-menu-item" href="#">STIR FRIED</a></li>
@@ -60,10 +60,10 @@
 
                     </ul>
                 </li>
-                <li class="movedownnav"><a href="#">SPECIALS</a></li>
-                <li class="movedownnav"><a href="~/Home/Contact">CONTACT</a></li>
+                <li class="movedownnav"><a href="#">Specials</a></li>
+                <li class="movedownnav"><a href="~/Home/Contact">Contact</a></li>
                 <li class="dropdown movedownnav">
-                    <a href="#">ACCOUNT</a>
+                    <a href="#">Account</a>
                     <ul class="dropdown-menu dropdown-menu-center ">
                         @Html.Partial("_loginPartial")
                     </ul>
@@ -76,7 +76,7 @@
         <nav class="navbar navbar-container navbar-top ">
             <div class="mobileLogoHolder">
                 <a class="noPad" href="~/Home/Index">
-                    <img class="mobileLogo" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
+                    <img class="mobileLogo" src="~/Source_Material/wild_tiger_thai_logo/proper_tiger_and_words.png" />
                 </a>
             </div>
             <ul class="nav navbar-nav mobileNav">
@@ -176,7 +176,9 @@
     <a class="fadeIn" id="back-top" href="#"></a>
     <script>
         $(document).ready(function () {
-            $('.table').DataTable();
+            $('.table').DataTable({
+                responsive: true
+            });
         });
 
         let width = $(window).width();

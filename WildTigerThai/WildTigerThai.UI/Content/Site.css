@@ -1,5 +1,5 @@
 ﻿htmml, body {
-    background-color: white;
+    background-color: #17181c;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -71,7 +71,6 @@ input[type="checkbox"].input-validation-error {
 .logoHolder {
     margin-right: 30% !important;
     max-width: 30%;
-    right: 5%;
     bottom: 25px;
 }
 .logo {
@@ -81,7 +80,6 @@ input[type="checkbox"].input-validation-error {
 }
 .mobileLogoHolder {
     max-width: 40%;
-    right: 1em;
     top: 1em;
     margin-right: 0px !important;
     float:left;
@@ -115,9 +113,12 @@ input[type="checkbox"].input-validation-error {
     max-width: 5em;
     padding-left: 75%;
 }
-.mobileLink{
-    color:white;
-    font-size:18px;
+.mobileLink {
+    font-family: 'Shojumaru', cursive;
+    font-weight: 100;
+    color: red;
+    font-size: 20px;
+    text-shadow: 1px 1px lightgray;
 }
 .noPad {
     padding:0 !important;
@@ -144,7 +145,6 @@ input[type="checkbox"].input-validation-error {
 }
 .dropdown {
     color: black;
-    font-weight: bold;
 }
 .center {
     text-align: center;
@@ -358,7 +358,6 @@ footer .block{
 }
 .largeFont {
     font-size:3em;
-    font-weight:bold;
 }
 .fixLeft {
     text-align: right;

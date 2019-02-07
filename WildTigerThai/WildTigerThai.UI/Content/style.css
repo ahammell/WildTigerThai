@@ -1,10 +1,11 @@
 /*------------- Common-CSS----------------*/
 
 body {
-    font-family: 'Miltonian Tattoo', cursive;
-    color: #555;
+    font-family: 'Kalam', cursive;
+    color: lightgray;
     font-size: 14px;
     font-weight: 300;
+    text-shadow:1px 1px darkgray;
 }
 li { list-style: none;}
 a:hover { text-decoration: none; }
@@ -262,13 +263,16 @@ section+section { margin-top: 50px; }
 	transform: translateY(0px);	
 }
 .nav-main > li a:hover, .nav-main > li a:focus {
-	color: white;
+	color: black;
+    text-shadow: 1px 1px white;
 }
 .nav-main > li a {
+    font-family: 'Shojumaru', cursive;
+    font-weight:100;
     padding: 20px 15px;
-    color: black;
-    font-weight:bold;
-    font-size: 28px;
+    color: goldenrod;
+    font-size: 38px;
+    text-shadow: 1px 1px maroon;
 }
 .navbar-nav {
 	float: none;
