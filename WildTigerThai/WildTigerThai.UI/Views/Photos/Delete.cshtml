@@ -4,38 +4,75 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete Photo</h2>
+<div class="desktop">
+    <h2>Delete Photo</h2>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.File)
-        </dt>
+    <div class="dl-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.File)
+            </dt>
 
-        <dd>
-            @{
-                var base64 = Convert.ToBase64String(Model.File);
-                var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
-            }
-            <img src="@imgSrc" />
-        </dd>
+            <dd>
+                @{
+                    var base64 = Convert.ToBase64String(Model.File);
+                    var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
+                }
+                <img src="@imgSrc" style="width: 100px;height:100px;margin-bottom:20px;"  />
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PhotoType.Type)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.PhotoType.Type)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PhotoType.Type)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.PhotoType.Type)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" class="btn btn-warning" />
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
         </div>
-    }
+        }
+    </div>
+</div>
+<div class="mobile">
+    <h2>Delete Photo</h2>
+
+    <div class="mobile-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.File)
+            </dt>
+
+            <dd>
+                <img src="@imgSrc" style="width: 100px;height:100px;margin-bottom:20px;"  />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhotoType.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhotoType.Type)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-warning mobile-button" />
+                @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+            </div>
+        }
+    </div>
 </div>

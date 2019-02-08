@@ -457,3 +457,38 @@ aside .closeBtn {
     float:right;
     padding-right:20px;
 }
+
+.form-horizontal{
+    margin: 0 auto;
+    width: 30%;
+}
+
+.form-group{
+    margin-right:0px !important;
+    margin-left:0px !important;
+}
+
+.btn2{
+    float:right;
+}
+
+.desktop h2{
+    margin-bottom: 25px;
+}
+
+.mobile h2{
+    margin-bottom: 25px;
+}
+
+.dl-horizontal{
+    margin: 0 auto;
+    width: 20%;
+}
+
+.mobile-horizontal{
+    text-align:center;
+}
+
+.delete-button{
+    float:left;
+}

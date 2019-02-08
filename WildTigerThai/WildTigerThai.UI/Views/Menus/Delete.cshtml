@@ -4,50 +4,103 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete Menu</h2>
+<div class="desktop">
+    <h2>Delete Menu</h2>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Menu1)
-        </dt>
+    <div class="dl-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Menu1)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Menu1)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Menu1)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SectionPrecedence)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SectionPrecedence)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SectionPrecedence)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SectionPrecedence)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MenuName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.MenuName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MenuName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MenuName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Section.Name)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Section.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Section.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Section.Name)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-warning delete-button" />
+                @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+            </div>
+        }
+    </div>
+</div>
+<div class="mobile">
+    <h2>Delete Menu</h2>
+
+    <div class="mobile-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Menu1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Menu1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SectionPrecedence)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SectionPrecedence)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MenuName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MenuName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Section.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Section.Name)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div>
+                <input type="submit" value="Delete" class="btn btn-warning delete-button" />
+                @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+            </div>
+        }
+    </div>
 </div>

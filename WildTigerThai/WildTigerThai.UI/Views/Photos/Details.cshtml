@@ -4,33 +4,63 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Photo Details</h2>
+<div class="desktop">
+    <h2>Photo Details</h2>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.File)
-        </dt>
+    <div class="dl-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.File)
+            </dt>
 
-        <dd>
-            @{
-                var base64 = Convert.ToBase64String(item.File);
-                var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
-            }
-            <img src="@imgSrc" />
-        </dd>
+            <dd>
+                @{
+                    var base64 = Convert.ToBase64String(Model.File);
+                    var imgSrc = String.Format("data:image/gif;base64, {0}", base64);
+                }
+                <img src="@imgSrc" style="width: 100px;height:100px;margin-bottom:20px;" />
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PhotoType.Type)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.PhotoType.Type)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PhotoType.Type)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.PhotoType.Type)
+            </dd>
 
-    </dl>
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Photo_ID }, htmlAttributes: new { @class = "btn btn-warning" })
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+        </p>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Photo_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="mobile">
+    <h2>Photo Details</h2>
+
+    <div class="mobile-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.File)
+            </dt>
+
+            <dd>
+                <img src="@imgSrc" style="width: 100px;height:100px;margin-bottom:20px;" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhotoType.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhotoType.Type)
+            </dd>
+
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Photo_ID }, htmlAttributes: new { @class = "btn btn-warning" })
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+        </p>
+    </div>
+</div>
