@@ -435,6 +435,15 @@ aside .closeBtn {
 .fa-times{
     color:red;
 }
+.pagination > li > a {
+    color: #e67700 !important;
+}
+    .pagination > .active > a, .pagination > .active > a:hover {
+        color: black !important;
+        background-color: #e67700 !important;
+        border-color: black !important;
+    }
+
 @keyframes fadein {
     from {
         opacity: 0;
