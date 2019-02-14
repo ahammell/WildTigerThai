@@ -11,10 +11,15 @@ li { list-style: none;}
 a:hover { text-decoration: none; }
 
 /*Headers*/
-h1,h2,h3,h4,h5,h6 { font-family: 'Yanone Kaffeesatz', sans-serif;color: #555}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shojumaru', cursive;
+    font-weight: 100;
+    color: darkgoldenrod;
+    text-shadow: 1px 1px maroon;
+}
 
-h1 { font-size: 50px; }
-h2 { font-size: 40px; }
+h1 { font-size: 70px; }
+h2 { font-size: 60px; }
 h3 { font-size: 35px; }
 h4 { font-size: 30px; }
 h5 { font-size: 25px; }

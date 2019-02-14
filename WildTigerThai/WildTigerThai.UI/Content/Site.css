@@ -8,9 +8,13 @@ aside {
     display: block;
     z-index: 100;
     position: fixed;
-    left: -0.9em;
-    top: 19.4em;
+    left: 0.5em;
+    top: 14.4em;
     -webkit-user-select: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 /*Scrollbar CSS*/
@@ -211,6 +215,24 @@ input[type="checkbox"].input-validation-error {
     padding-bottom: 15em;
     margin: auto;
 }
+.dt-bootstrap {
+    color: white;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
+.even {
+    color: white;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
+.odd {
+    color: white;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
 .tableImage {
     width: 100px;
     height: 100px;
@@ -246,9 +268,24 @@ footer .block{
     text-align: center;
 }
 .btn-warning {
-    color:black;
+    color: black;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: none;
 }
-
+.btn-default {
+    color: black;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: none;
+}
+.btn-lg {
+    color: black;
+    font-size: 24px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight:bold;
+    text-shadow: none;
+}
 
 .banner-image {
     object-fit: cover;
@@ -296,11 +333,15 @@ footer .block{
     left: 50%;
 }
 
-.full-border{
-    width:100%;
+.full-border {
+    width: 100%;
     border: 1px solid black;
     height: auto;
     margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: none;
 }
 
 .mobile #tableImage{
@@ -375,19 +416,25 @@ footer .block{
     border-radius: 5px 5px 0 0;
 }
 aside .closeBtn {
-    background-color: #e67700;
     border-radius: 5px;
+    border: 10px solid #e67700;
     font-size:1.5em;
     text-align: right;
     position: absolute;
-    top: 5px;
-    left: 20px;
     z-index: 101;
+    left:20px;
+    top:3px;
 }
 .fa{
     font-size:32px !important;
 }
-
+.fa-cutlery {
+    color: silver;
+    background-color: #e67700;
+}
+.fa-times{
+    color:red;
+}
 @keyframes fadein {
     from {
         opacity: 0;
