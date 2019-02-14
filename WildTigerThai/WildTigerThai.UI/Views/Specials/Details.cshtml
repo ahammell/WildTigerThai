@@ -4,61 +4,123 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Special Details</h2>
+<div class="desktop">
+    <h2>Special Details</h2>
 
-<div>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div class="dl-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SpecialBeginningDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialBeginningDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SpecialBeginningDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SpecialBeginningDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SpecialEndDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialEndDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SpecialEndDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SpecialEndDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SpecialStartTime)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialStartTime)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SpecialStartTime)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SpecialStartTime)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SpecialEndTime)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialEndTime)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SpecialEndTime)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.SpecialEndTime)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Active)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Active)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Active)
+            </dd>
 
-    </dl>
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Special_ID }, htmlAttributes: new { @class = "btn btn-warning" })
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+        </p>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Special_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="mobile">
+    <h2>Special Details</h2>
+
+    <div class="mobile-horizontal">
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialBeginningDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SpecialBeginningDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialEndDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SpecialEndDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialStartTime)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SpecialStartTime)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialEndTime)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SpecialEndTime)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Active)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Active)
+            </dd>
+
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Special_ID }, htmlAttributes: new { @class = "btn btn-warning mobile-button" })
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+        </p>
+    </div>
+</div>

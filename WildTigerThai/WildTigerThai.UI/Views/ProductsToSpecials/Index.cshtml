@@ -47,9 +47,9 @@
                         @Html.DisplayFor(modelItem => item.Special.Name)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductToSpecial_ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ProductToSpecial_ID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductToSpecial_ID })
+                        <a href="@Url.Action("Edit", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                        <a href="@Url.Action("Details", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                        <a href="@Url.Action("Delete", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })" class="link-icons"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             }
@@ -80,9 +80,9 @@
                     @Html.DisplayFor(modelItem => item.Active)
                 </td>
                 <td class="mobile-links">
-                    <a href="@Url.Action("Edit", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })"><i class="fa fa-pencil"></i></a><br />
-                    <a href="@Url.Action("Details", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })"><i class="fa fa-info-circle"></i></a><br />
-                    <a href="@Url.Action("Delete", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })"><i class="fa fa-trash"></i></a>
+                    <a href="@Url.Action("Edit", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                    <a href="@Url.Action("Details", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                    <a href="@Url.Action("Delete", "ProductsToSpecials", new { id = item.ProductToSpecial_ID })" class="link-icons"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         </table>

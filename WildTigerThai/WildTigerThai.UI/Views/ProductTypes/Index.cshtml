@@ -35,9 +35,9 @@
                         @Html.DisplayFor(modelItem => item.Active)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductType_ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ProductType_ID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductType_ID })
+                        <a href="@Url.Action("Edit", "ProductTypes", new { id = item.ProductType_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                        <a href="@Url.Action("Details", "ProductTypes", new { id = item.ProductType_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                        <a href="@Url.Action("Delete", "ProductTypes", new { id = item.ProductType_ID })" class="link-icons"><i class="fa fa-trash"></i></a> 
                     </td>
                 </tr>
             }
@@ -62,9 +62,9 @@
                     @Html.DisplayFor(modelItem => item.Active)
                 </td>
                 <td class="mobile-links">
-                    <a href="@Url.Action("ProductTypes", "Edit", new { id = item.ProductType_ID })"><i class="fa fa-pencil"></i></a><br />
-                    <a href="@Url.Action("ProductTypes", "Details", new { id = item.ProductType_ID })"><i class="fa fa-info-circle"></i></a><br />
-                    <a href="@Url.Action("ProductTypes", "Delete", new { id = item.ProductType_ID })"><i class="fa fa-trash"></i></a>
+                    <a href="@Url.Action("Edit", "ProductTypes", new { id = item.ProductType_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                    <a href="@Url.Action("Details", "ProductTypes", new { id = item.ProductType_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                    <a href="@Url.Action("Delete", "ProductTypes", new { id = item.ProductType_ID })" class="link-icons"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         </table>

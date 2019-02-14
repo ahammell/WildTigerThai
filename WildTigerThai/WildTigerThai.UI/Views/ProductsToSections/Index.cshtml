@@ -35,9 +35,9 @@
                         @Html.DisplayFor(modelItem => item.Section.Name)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductToSection_ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ProductToSection_ID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductToSection_ID })
+                        <a href="@Url.Action("Edit", "ProductsToSections", new { id = item.ProductToSection_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                        <a href="@Url.Action("Details", "ProductsToSections", new { id = item.ProductToSection_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                        <a href="@Url.Action("Delete", "ProductsToSections", new { id = item.ProductToSection_ID })" class="link-icons"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             }
@@ -62,9 +62,9 @@
                     @Html.DisplayFor(modelItem => item.Section.Name)
                 </td>
                 <td class="mobile-links">
-                    <a href="@Url.Action("Edit", "ProductsToSections", new { id = item.ProductToSection_ID })"><i class="fa fa-pencil"></i></a><br />
-                    <a href="@Url.Action("Details", "ProductsToSections", new { id = item.ProductToSection_ID })"><i class="fa fa-info-circle"></i></a><br />
-                    <a href="@Url.Action("Delete", "ProductsToSections", new { id = item.ProductToSection_ID })"><i class="fa fa-trash"></i></a>
+                    <a href="@Url.Action("Edit", "ProductsToSections", new { id = item.ProductToSection_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                    <a href="@Url.Action("Details", "ProductsToSections", new { id = item.ProductToSection_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                    <a href="@Url.Action("Delete", "ProductsToSections", new { id = item.ProductToSection_ID })" class="link-icons"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         </table>
