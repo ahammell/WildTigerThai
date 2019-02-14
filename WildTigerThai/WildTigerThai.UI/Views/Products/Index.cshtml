@@ -104,9 +104,9 @@
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
                     <td class="mobile-links" rowspan="2">
-                        <a href="@Url.Action("Edit", "Products", new { id = item.Product_ID, @class = "link-icons" })"><i class="fa fa-pencil"></i></a><br />
-                        <a href="@Url.Action("Details", "Products", new { id = item.Product_ID, @class = "link-icons" })"><i class="fa fa-info-circle"></i></a><br />
-                        <a href="@Url.Action("Delete", "Products", new { id = item.Product_ID, @class = "link-icons" })"><i class="fa fa-trash"></i></a>
+                        <a href="@Url.Action("Edit", "Products", new { id = item.Product_ID })" class="link-icons"><i class="fa fa-pencil"></i></a><br />
+                        <a href="@Url.Action("Details", "Products", new { id = item.Product_ID })" class="link-icons"><i class="fa fa-info-circle"></i></a><br />
+                        <a href="@Url.Action("Delete", "Products", new { id = item.Product_ID })" class="link-icons"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             }
