@@ -553,3 +553,12 @@ aside .closeBtn {
     flex-wrap: nowrap;
     justify-content: space-between;
 }
+
+.link-icons {
+    color: #f0ad4e;
+    border-color: #eea236;
+}
+    .link-icons:hover {
+        color: #ed9c28;
+        border-color: #d58512;
+    }
