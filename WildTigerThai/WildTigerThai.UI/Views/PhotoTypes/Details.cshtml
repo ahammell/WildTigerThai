@@ -54,9 +54,9 @@
             </dd>
 
         </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.PhotoType_ID }, htmlAttributes: new { @class = "btn btn-warning" })
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
+        </p>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.PhotoType_ID }, htmlAttributes: new { @class = "btn btn-warning" })
-        @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-warning btn2" })
-    </p>
 </div>
