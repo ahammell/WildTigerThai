@@ -508,10 +508,10 @@ aside .closeBtn {
 }
 
 .link-icons {
-    background-color: #f0ad4e;
+    color: #f0ad4e;
     border-color: #eea236;
 }
     .link-icons:hover {
-        background-color: #ed9c28;
+        color: #ed9c28;
         border-color: #d58512;
     }
