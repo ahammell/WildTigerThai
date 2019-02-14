@@ -492,3 +492,17 @@ aside .closeBtn {
 .delete-button{
     float:left;
 }
+
+.password-padding {
+    margin-bottom: 40px !important;
+}
+.width-75{
+    width:75%;
+}
+
+.btn-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}

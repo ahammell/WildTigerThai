@@ -59,10 +59,9 @@
                         @Html.DisplayFor(modelItem => item.ProductType.Description)
                     </td>
                     <td>
-                        @*<input id="@item.Product_ID" type="button" class="btn btn-warning" value="Edit" onclick="location.href='@Url.Action("Edit", "Products", new { id = item.Product_ID})'" style="width:5em" /><br />
-                            <input id="@item.Product_ID" type="button" class="btn btn-warning" value="Details" onclick="location.href='@Url.Action("Details", "Products", new { id = item.Product_ID})'" style="width:5em" /><br />
-                            <input id="@item.Product_ID" type="button" class="btn btn-warning" value="Delete" onclick="location.href='@Url.Action("Delete", "Products", new { id = item.Product_ID})'" style="width:5em" />*@
-
+                        <a href="@Url.Action("Edit", "Products", new { id = item.Product_ID })"><i class="fa fa-pencil"></i></a><br />
+                        <a href="@Url.Action("Details", "Products", new { id = item.Product_ID })"><i class="fa fa-info-circle"></i></a><br />
+                        <a href="@Url.Action("Delete", "Products", new { id = item.Product_ID })"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             }
