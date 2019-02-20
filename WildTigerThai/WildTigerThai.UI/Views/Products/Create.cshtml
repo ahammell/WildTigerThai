@@ -128,9 +128,9 @@
             <div class="form-group">
                 <span class="control-label col-md-2">Product Photo</span>
                 <div class="col-md-10">
-                    @*@Html.DropDownList("ProductPhoto_ID", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.ProductPhoto_ID, "", new { @class = "text-danger" })*@
-                    <button type="button" class="btn btn-warning" onclick="@Html.Partial("~/Photos/ChoosePhoto", Model)"></button>
+                    @Html.DropDownList("ProductPhoto_ID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ProductPhoto_ID, "", new { @class = "text-danger" })
+                    @*<button type="button" class="btn btn-warning" onclick="@Html.Partial("~/Photos/ChoosePhoto", Model)"></button>*@
                 </div>
             </div>
 
