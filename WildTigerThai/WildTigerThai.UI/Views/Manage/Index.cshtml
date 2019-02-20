@@ -24,7 +24,7 @@
 
         <p>
             @(Model.HasPassword ? Html.ActionLink("Change your password", "ChangePassword")
-                                : Html.ActionLink("Pick a password", "SetPassword"))
+                                        : Html.ActionLink("Pick a password", "SetPassword"))
         </p>
         <p>
             Phone Number: @(Model.PhoneNumber ?? "None") [
@@ -87,6 +87,15 @@
                     <input type="submit" value="Remember Browser" class="btn btn-default" />
                 </p>
             }
+        }
+
+        @if (Request.IsAuthenticated && User.IsInRole("Administrator"))
+        {
+                <div class="mobile mobileLink">
+                    <a href="~/Home/AdminDashboard">ADMIN</a>
+                    <a href="~/UsersAdmin/Index">USERS ADMIN</a>
+                    <a href="~/RolesAdmin/Index">USERS ADMIN</a>
+                </div>
         }
     </div>
 </div>

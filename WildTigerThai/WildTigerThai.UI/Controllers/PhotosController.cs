@@ -148,5 +148,10 @@ namespace WildTigerThai.UI.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult ChoosePhoto(Product model)
+        {
+            return PartialView(model);
+        }
     }
 }

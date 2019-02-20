@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace WildTigerThai.UI.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Administrator")]
     public class UsersAdminController : Controller
     {
         public UsersAdminController()
