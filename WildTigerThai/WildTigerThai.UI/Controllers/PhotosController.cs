@@ -149,9 +149,20 @@ namespace WildTigerThai.UI.Controllers
             base.Dispose(disposing);
         }
 
-        public ActionResult ChoosePhoto(Product model)
+        [HttpGet]
+        public PartialViewResult ChoosePhoto(int id)
         {
-            return PartialView(model);
+            Product product = db.Products.Find(id);
+            return PartialView(product);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public JsonResult ChoosePhotoAjaxCreate(Product product)
+        {
+            db.Products.Add(product);
+            db.SaveChanges();
+            return Json(product);
         }
     }
 }
