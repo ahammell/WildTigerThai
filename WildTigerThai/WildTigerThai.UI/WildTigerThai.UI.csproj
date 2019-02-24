@@ -433,6 +433,8 @@
     <Content Include="_archive\products.html" />
     <Content Include="_archive\single-product.html" />
     <Content Include="Content\Images\header.psd" />
+    <None Include="Properties\PublishProfiles\wildtigerthai.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\wildtigerthai.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

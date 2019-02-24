@@ -30,7 +30,7 @@ namespace WildTigerThai.DATA.EF
         [Required(ErrorMessage = "*Required")]
         public string ProductName { get; set; }
         [Display(Name = "Product Description")]
-        [StringLength(100, ErrorMessage = "Should not exceed 300 characters")]
+        [StringLength(300, ErrorMessage = "Should not exceed 300 characters")]
         [Required(ErrorMessage = "*Required")]
         public string Description { get; set; }
         [DisplayFormat(NullDisplayText = "N/A", DataFormatString = "{0:c}")]
