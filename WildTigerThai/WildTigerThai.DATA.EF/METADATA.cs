@@ -31,6 +31,7 @@ namespace WildTigerThai.DATA.EF
         public string ProductName { get; set; }
         [Display(Name = "Product Description")]
         [StringLength(300, ErrorMessage = "Should not exceed 300 characters")]
+        [UIHint("MultilineText")]
         [Required(ErrorMessage = "*Required")]
         public string Description { get; set; }
         [DisplayFormat(NullDisplayText = "N/A", DataFormatString = "{0:c}")]
