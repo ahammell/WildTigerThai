@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUi9OWh5FvEiSL8a3VQSVRgAAAAACAAAAAAAQZgAAAAEAACAAAAD2wxG3sGsdzn7dgskEH45kGRkSSfG7nOHH5m/IRirwpwAAAAAOgAAAAAIAACAAAAA+POmnaWs35vme/iW6vxmU85JFwhQLTVmATU5nbKFUjyAAAACMNKmYByfGS1o+x0jcAtn7YNbOkpvTShTgvZJwiEvXk0AAAACCX23fL4AL5MhUPe4uBppTQJqZEv4X73yjb7cCbkX/rlVH9DxLesFql2qRRwsjFVwPcW1pKD6oQqbbSwMBSwEv</EncryptedPassword>
     <_PublishTargetUrl>ftp://w27.winhost.com:21/myapp</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
@@ -266,19 +266,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2019 21:43:01</publishTime>
     </File>
     <File Include="bin/WildTigerThai.DATA.EF.dll">
-      <publishTime>02/23/2019 18:19:04</publishTime>
+      <publishTime>02/23/2019 18:58:58</publishTime>
     </File>
     <File Include="bin/WildTigerThai.DATA.EF.dll.config">
       <publishTime>02/23/2019 17:25:00</publishTime>
     </File>
     <File Include="bin/WildTigerThai.DATA.EF.pdb">
-      <publishTime>02/23/2019 18:19:04</publishTime>
+      <publishTime>02/23/2019 18:58:58</publishTime>
     </File>
     <File Include="bin/WildTigerThai.UI.dll">
-      <publishTime>02/23/2019 18:19:05</publishTime>
+      <publishTime>02/23/2019 19:26:05</publishTime>
     </File>
     <File Include="bin/WildTigerThai.UI.pdb">
-      <publishTime>02/23/2019 18:19:05</publishTime>
+      <publishTime>02/23/2019 19:26:05</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>02/23/2019 17:25:00</publishTime>
@@ -1034,7 +1034,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2019 21:42:59</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/23/2019 18:19:16</publishTime>
+      <publishTime>02/23/2019 19:26:07</publishTime>
     </File>
     <File Include="_archive/blog-single.html">
       <publishTime>01/11/2019 21:42:59</publishTime>
