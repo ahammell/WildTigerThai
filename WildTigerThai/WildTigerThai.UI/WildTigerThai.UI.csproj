@@ -198,6 +198,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
+    <Compile Include="Controllers\PageMenuController.cs" />
     <Compile Include="Controllers\PhotosController.cs" />
     <Compile Include="Controllers\PhotoTypesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -543,6 +544,7 @@
     <Content Include="Views\Menus\Edit.cshtml" />
     <Content Include="Views\Menus\Index.cshtml" />
     <Content Include="Views\Photos\ChoosePhoto.cshtml" />
+    <Content Include="Views\PageMenu\MainMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -564,6 +566,10 @@
     <ProjectReference Include="..\WildTigerThai.DATA.EF\WildTigerThai.DATA.EF.csproj">
       <Project>{085f1e1b-e0ad-40a2-b745-3f3f49653fa9}</Project>
       <Name>WildTigerThai.DATA.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WildTigerThai.Models\WildTigerThai.Models.csproj">
+      <Project>{2d03645c-88ad-4b68-b877-4870829e7c4b}</Project>
+      <Name>WildTigerThai.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

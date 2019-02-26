@@ -116,7 +116,7 @@ namespace WildTigerThai.DATA.EF
         //public int Menu_ID { get; set; }
         [Display(Name = "Menu")]
         [Required(ErrorMessage ="*Required")]
-        public int Menu1 { get; set; }
+        public int MenuNumber { get; set; }
         [Display(Name = "Section")]
         [Required(ErrorMessage = "*Required")]
         public int Section_ID { get; set; }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildTigerThai.UI", "WildTig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildTigerThai.DATA.EF", "WildTigerThai.DATA.EF\WildTigerThai.DATA.EF.csproj", "{085F1E1B-E0AD-40A2-B745-3F3F49653FA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildTigerThai.Models", "WildTigerThai.Models\WildTigerThai.Models.csproj", "{2D03645C-88AD-4B68-B877-4870829E7C4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{085F1E1B-E0AD-40A2-B745-3F3F49653FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{085F1E1B-E0AD-40A2-B745-3F3F49653FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{085F1E1B-E0AD-40A2-B745-3F3F49653FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D03645C-88AD-4B68-B877-4870829E7C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D03645C-88AD-4B68-B877-4870829E7C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D03645C-88AD-4B68-B877-4870829E7C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D03645C-88AD-4B68-B877-4870829E7C4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

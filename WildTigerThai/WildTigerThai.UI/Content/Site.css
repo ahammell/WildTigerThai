@@ -571,3 +571,9 @@ aside .closeBtn {
         color: #ed9c28;
         border-color: #d58512;
     }
+.productTitle {
+    font-size: 3em;
+}
+.productDescription{
+    font-size:2em;
+}

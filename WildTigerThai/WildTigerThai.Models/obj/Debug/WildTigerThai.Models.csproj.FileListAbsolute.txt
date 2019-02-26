@@ -1,0 +1,12 @@
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\WildTigerThai.Models.dll
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\WildTigerThai.Models.pdb
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\WildTigerThai.DATA.EF.dll
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\EntityFramework.dll
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\WildTigerThai.DATA.EF.pdb
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\WildTigerThai.DATA.EF.dll.config
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\bin\Debug\EntityFramework.xml
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\obj\Debug\WildTigerThai.Models.csprojAssemblyReference.cache
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\obj\Debug\WildTigerThai.Models.csproj.CoreCompileInputs.cache
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\obj\Debug\WildTigerThai.Models.csproj.CopyComplete
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\obj\Debug\WildTigerThai.Models.dll
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.Models\obj\Debug\WildTigerThai.Models.pdb

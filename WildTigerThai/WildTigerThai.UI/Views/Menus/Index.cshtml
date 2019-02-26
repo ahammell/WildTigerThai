@@ -16,7 +16,7 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Menu1)
+                    @Html.DisplayNameFor(model => model.MenuNumber)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.SectionPrecedence)
@@ -35,7 +35,7 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Menu1)
+                        @Html.DisplayFor(modelItem => item.MenuNumber)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.SectionPrecedence)
@@ -68,8 +68,8 @@
         <table class="full-border">
             <tr>
                 <td class="phototype-content">
-                    <b>@Html.DisplayNameFor(model => model.Menu1):</b>
-                    @Html.DisplayFor(modelItem => item.Menu1)<br />
+                    <b>@Html.DisplayNameFor(model => model.MenuNumber):</b>
+                    @Html.DisplayFor(modelItem => item.MenuNumber)<br />
                     <b>@Html.DisplayNameFor(model => model.SectionPrecedence):</b>
                     @Html.DisplayFor(modelItem => item.SectionPrecedence)
                 <td>

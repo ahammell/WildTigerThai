@@ -5,7 +5,7 @@
       <PropertyRef Name="Menu_ID" />
     </Key>
     <Property Name="Menu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Menu" Type="int" Nullable="false" />
+    <Property Name="MenuNumber" Type="int" Nullable="false" />
     <Property Name="Section_ID" Type="int" Nullable="false" />
     <Property Name="SectionPrecedence" Type="int" Nullable="false" />
     <Property Name="MenuName" Type="varchar" MaxLength="50" />
@@ -35,7 +35,7 @@
     <Property Name="ProductName" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Description" Type="varchar" MaxLength="300" Nullable="false" />
     <Property Name="Active" Type="bit" Nullable="false" />
-    <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ProductPhoto_ID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductsToSections">
@@ -96,7 +96,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Photos_fk0">
+  <Association Name="FK_Photos_fk0">
     <End Role="PhotoTypes" Type="Self.PhotoTypes" Multiplicity="1" />
     <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
     <ReferentialConstraint>
@@ -108,7 +108,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Products_fk0">
+  <Association Name="FK_Products_fk0">
     <End Role="ProductTypes" Type="Self.ProductTypes" Multiplicity="1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
     <ReferentialConstraint>
@@ -120,7 +120,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Products_fk1">
+  <Association Name="FK_Products_fk1">
     <End Role="Photos" Type="Self.Photos" Multiplicity="1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
     <ReferentialConstraint>
@@ -132,7 +132,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ProductsToSections_fk0">
+  <Association Name="FK_ProductsToSections_fk0">
     <End Role="Products" Type="Self.Products" Multiplicity="1" />
     <End Role="ProductsToSections" Type="Self.ProductsToSections" Multiplicity="*" />
     <ReferentialConstraint>
@@ -144,7 +144,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ProductsToSections_fk1">
+  <Association Name="FK_ProductsToSections_fk1">
     <End Role="Sections" Type="Self.Sections" Multiplicity="1" />
     <End Role="ProductsToSections" Type="Self.ProductsToSections" Multiplicity="*" />
     <ReferentialConstraint>
@@ -156,7 +156,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ProductsToSpecials_fk0">
+  <Association Name="FK_ProductsToSpecials_fk0">
     <End Role="Products" Type="Self.Products" Multiplicity="1" />
     <End Role="ProductsToSpecials" Type="Self.ProductsToSpecials" Multiplicity="*" />
     <ReferentialConstraint>
@@ -168,7 +168,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ProductsToSpecials_fk1">
+  <Association Name="FK_ProductsToSpecials_fk1">
     <End Role="Specials" Type="Self.Specials" Multiplicity="1" />
     <End Role="ProductsToSpecials" Type="Self.ProductsToSpecials" Multiplicity="*" />
     <ReferentialConstraint>
@@ -194,31 +194,31 @@
       <End Role="Sections" EntitySet="Sections" />
       <End Role="Menus" EntitySet="Menus" />
     </AssociationSet>
-    <AssociationSet Name="Photos_fk0" Association="Self.Photos_fk0">
+    <AssociationSet Name="FK_Photos_fk0" Association="Self.FK_Photos_fk0">
       <End Role="PhotoTypes" EntitySet="PhotoTypes" />
       <End Role="Photos" EntitySet="Photos" />
     </AssociationSet>
-    <AssociationSet Name="Products_fk0" Association="Self.Products_fk0">
+    <AssociationSet Name="FK_Products_fk0" Association="Self.FK_Products_fk0">
       <End Role="ProductTypes" EntitySet="ProductTypes" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>
-    <AssociationSet Name="Products_fk1" Association="Self.Products_fk1">
+    <AssociationSet Name="FK_Products_fk1" Association="Self.FK_Products_fk1">
       <End Role="Photos" EntitySet="Photos" />
       <End Role="Products" EntitySet="Products" />
     </AssociationSet>
-    <AssociationSet Name="ProductsToSections_fk0" Association="Self.ProductsToSections_fk0">
+    <AssociationSet Name="FK_ProductsToSections_fk0" Association="Self.FK_ProductsToSections_fk0">
       <End Role="Products" EntitySet="Products" />
       <End Role="ProductsToSections" EntitySet="ProductsToSections" />
     </AssociationSet>
-    <AssociationSet Name="ProductsToSections_fk1" Association="Self.ProductsToSections_fk1">
+    <AssociationSet Name="FK_ProductsToSections_fk1" Association="Self.FK_ProductsToSections_fk1">
       <End Role="Sections" EntitySet="Sections" />
       <End Role="ProductsToSections" EntitySet="ProductsToSections" />
     </AssociationSet>
-    <AssociationSet Name="ProductsToSpecials_fk0" Association="Self.ProductsToSpecials_fk0">
+    <AssociationSet Name="FK_ProductsToSpecials_fk0" Association="Self.FK_ProductsToSpecials_fk0">
       <End Role="Products" EntitySet="Products" />
       <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
     </AssociationSet>
-    <AssociationSet Name="ProductsToSpecials_fk1" Association="Self.ProductsToSpecials_fk1">
+    <AssociationSet Name="FK_ProductsToSpecials_fk1" Association="Self.FK_ProductsToSpecials_fk1">
       <End Role="Specials" EntitySet="Specials" />
       <End Role="ProductsToSpecials" EntitySet="ProductsToSpecials" />
     </AssociationSet>

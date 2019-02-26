@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WildTigerThai.Models.PageMenuItems>
+
+<div class="desktop">
+    <div class="row">
+        @{
+            var menus = ViewBag.Message;
+            var sections = ViewBag.Message2;
+            for (int i = 0; i < sections.Count; i++)
+            {
+                <h2>@sections[i].Name</h2>
+                for (int j = 0; j < menus.Count; j++)
+                {
+                    foreach (var item in Model)
+                    {
+                        if (item.SectionNumber == menus[j].Section_ID && item.SectionNumber == sections[i].Section_ID)
+                        {
+                            if (i % 2 == 0)
+                            {
+                                <div class="leftAlign">
+                                    <div class="col-md-12">
+                                        <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
+                                        <br />
+                                        <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </div>
+</div>

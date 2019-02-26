@@ -5,11 +5,11 @@
       <PropertyRef Name="Menu_ID" />
     </Key>
     <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Menu1" Type="Int32" Nullable="false" />
     <Property Name="Section_ID" Type="Int32" Nullable="false" />
     <Property Name="SectionPrecedence" Type="Int32" Nullable="false" />
     <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Section" Relationship="Self.FK_Menus_Sections" FromRole="Menus" ToRole="Sections" />
+    <Property Name="MenuNumber" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Photo">
     <Key>
@@ -39,7 +39,7 @@
     <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ProductPhoto_ID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Photo" Relationship="Self.Products_fk1" FromRole="Products" ToRole="Photos" />
     <NavigationProperty Name="ProductType" Relationship="Self.Products_fk0" FromRole="Products" ToRole="ProductTypes" />

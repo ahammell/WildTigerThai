@@ -15,10 +15,10 @@ namespace WildTigerThai.DATA.EF
     public partial class Menu
     {
         public int Menu_ID { get; set; }
-        public int Menu1 { get; set; }
         public int Section_ID { get; set; }
         public int SectionPrecedence { get; set; }
         public string MenuName { get; set; }
+        public int MenuNumber { get; set; }
     
         public virtual Section Section { get; set; }
     }

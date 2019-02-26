@@ -89,19 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WildTigerThai.tt</DependentUpon>
     </Compile>
-    <Compile Include="WildTigerThai.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WildTigerThai.edmx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="WildTigerThai.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>WildTigerThai.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <EntityDeploy Include="WildTigerThai.edmx" />
     <None Include="WildTigerThai.edmx.diagram">
       <DependentUpon>WildTigerThai.edmx</DependentUpon>
     </None>
