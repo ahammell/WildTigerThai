@@ -40,7 +40,7 @@
     <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Active" Type="Boolean" Nullable="false" />
     <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="ProductPhoto_ID" Type="Int32" Nullable="false" />
+    <Property Name="Photo_ID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Photo" Relationship="Self.Products_fk1" FromRole="Products" ToRole="Photos" />
     <NavigationProperty Name="ProductType" Relationship="Self.Products_fk0" FromRole="Products" ToRole="ProductTypes" />
     <NavigationProperty Name="ProductsToSections" Relationship="Self.ProductsToSections_fk0" FromRole="Products" ToRole="ProductsToSections" />
@@ -132,7 +132,7 @@
         <PropertyRef Name="Photo_ID" />
       </Principal>
       <Dependent Role="Products">
-        <PropertyRef Name="ProductPhoto_ID" />
+        <PropertyRef Name="Photo_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

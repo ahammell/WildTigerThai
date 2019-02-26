@@ -58,10 +58,20 @@
 
             <div class="form-group">
                 <span class="control-label col-md-2">Product Photo</span>
-                <div class="col-md-10">
-                    @Html.DropDownList("ProductPhoto_ID", null, htmlAttributes: new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.ProductPhoto_ID, "", new { @class = "text-danger" })
-                </div>
+                <img class="col-md-10">
+                @*@Html.DropDownList("ProductPhoto_ID", null, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProductPhoto_ID, "", new { @class = "text-danger" })*@
+                @{
+                    var images = ViewBag.Photo_ID;
+                    foreach (var image in images)
+                    {
+                        <img src="@image.Text"/>
+                    }
+                }
+                @*@Ajax.ActionLink("Open popup", "ChoosePhoto", new { id = Model == null ? 0 : Model.Product_ID }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, OnSuccess = "openPopup" })<br />*@
+
+                <div id="result" style="display:none;"></div>
+            
             </div>
 
             <div class="form-group">
@@ -128,10 +138,10 @@
             <div class="form-group">
                 <span class="control-label col-md-2">Product Photo</span>
                 <div class="col-md-10">
-                    @Html.DropDownList("ProductPhoto_ID", null, htmlAttributes: new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.ProductPhoto_ID, "", new { @class = "text-danger" })
-                    @*<button type="button" class="btn btn-warning" onclick="@Html.Partial("PublisherCreate", new WildTigerThai.DATA.EF.Product())"></button>*@
-
+                    @*@Html.DropDownList("ProductPhoto_ID", null, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ProductPhoto_ID, "", new { @class = "text-danger" })*@
+                    @Ajax.ActionLink("Open popup", "ChoosePhoto", new { id = Model == null ? 0 : Model.Product_ID }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, OnSuccess = "openPopup" })<br />
+                    <div id="result" style="display:none;"></div>
                 </div>
             </div>
 
@@ -144,3 +154,22 @@
         </div>
     }
 </div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#result").dialog({
+                autoOpen: false,
+                title: 'Title',
+                width: 500,
+                height: 'auto',
+                modal: true
+            });
+        });
+        function openPopup() {
+            $("#result").dialog("open");
+        }
+    </script>
+
+}

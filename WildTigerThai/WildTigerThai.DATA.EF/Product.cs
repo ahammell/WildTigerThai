@@ -27,7 +27,7 @@ namespace WildTigerThai.DATA.EF
         public string Description { get; set; }
         public bool Active { get; set; }
         public decimal Price { get; set; }
-        public int ProductPhoto_ID { get; set; }
+        public int Photo_ID { get; set; }
     
         public virtual Photo Photo { get; set; }
         public virtual ProductType ProductType { get; set; }

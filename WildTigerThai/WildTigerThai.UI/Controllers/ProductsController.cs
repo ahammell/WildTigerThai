@@ -39,7 +39,14 @@ namespace WildTigerThai.UI.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID");
+            var photos = from p in db.Photos
+                         select new { p.Photo_ID, p.File };
+            ViewBag.Photo_ID = photos.ToList().Select(p => new SelectListItem
+            {
+                Text = String.Format("data:image/gif;base64, {0}", Convert.ToBase64String(p.File)),
+                Value = p.Photo_ID.ToString(),
+                Selected = (p.Photo_ID == 1)
+            }).ToList();
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description");
             return View();
         }
@@ -58,7 +65,7 @@ namespace WildTigerThai.UI.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
+            //ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description", product.ProductType_ID);
             return View(product);
         }
@@ -75,7 +82,7 @@ namespace WildTigerThai.UI.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
+            //ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description", product.ProductType_ID);
             return View(product);
         }
@@ -93,7 +100,7 @@ namespace WildTigerThai.UI.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
+            //ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description", product.ProductType_ID);
             return View(product);
         }
@@ -131,6 +138,21 @@ namespace WildTigerThai.UI.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [HttpGet]
+        public PartialViewResult ChoosePhoto()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public JsonResult ChoosePhotoAjaxCreate(Product product)
+        {
+            db.Products.Add(product);
+            db.SaveChanges();
+            return Json(product);
         }
     }
 }

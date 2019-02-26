@@ -300,6 +300,7 @@
     <Content Include="Scripts\jquery.nicescroll.js" />
     <Content Include="Scripts\jquery.nivo.slider.js" />
     <Content Include="Scripts\jquery.scrollUp.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jscrollpane.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\mousewheel.js" />
@@ -538,7 +539,7 @@
     <Content Include="Views\Menus\Details.cshtml" />
     <Content Include="Views\Menus\Edit.cshtml" />
     <Content Include="Views\Menus\Index.cshtml" />
-    <Content Include="Views\Photos\ChoosePhoto.cshtml" />
+    <Content Include="Views\Products\ChoosePhoto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
