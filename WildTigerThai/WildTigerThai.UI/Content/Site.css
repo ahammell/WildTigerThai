@@ -379,6 +379,16 @@ footer .block{
     text-align:left;
     margin-bottom: 10em;
 }
+.rightAlignMenu {
+    text-align: right;
+    margin-bottom: 4em;
+}
+
+.leftAlignMenu {
+    text-align: left;
+    margin-bottom: 4em;
+}
+
 .inline {
     display:inline;
 }
@@ -576,4 +586,48 @@ aside .closeBtn {
 }
 .productDescription{
     font-size:2em;
+}
+
+
+.accordionItem {
+    float: left;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.accordionItemHeading {
+    cursor: pointer;
+    width: 100%;
+    user-select:none;
+}
+
+.close .accordionItemContent {
+    height: 0px;
+    transition: height 1.2s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    float: left;
+    display: block;
+}
+
+.open .accordionItemContent {
+    padding: 20px;
+    border: 5px solid maroon;
+    width: 100%;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 1.2s ease;
+    box-sizing: border-box;
 }

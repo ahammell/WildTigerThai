@@ -1,20 +1,4 @@
 $(document).ready(function() {
-	 // Owl carousel code
-	$('#slider').nivoSlider();
-	
-	$("#owl-example").owlCarousel({
-	  	autoPlay : true
-	});
-
-	// Dropdown Visibility on hover
-	$('li.dropdown').on('mouseover', function(){
-	  		$(this).addClass('open');
-	})
-
-	.on('mouseout', function(){
-		$(this).removeClass('open');
-	});
-
 	// fade in #back-top
 
 	$(window).scroll(function () {

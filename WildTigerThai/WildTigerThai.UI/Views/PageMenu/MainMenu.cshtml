@@ -7,27 +7,78 @@
             var sections = ViewBag.Message2;
             for (int i = 0; i < sections.Count; i++)
             {
-                <h2>@sections[i].Name</h2>
-                for (int j = 0; j < menus.Count; j++)
+                if (i == 0)
                 {
-                    foreach (var item in Model)
-                    {
-                        if (item.SectionNumber == menus[j].Section_ID && item.SectionNumber == sections[i].Section_ID)
-                        {
-                            if (i % 2 == 0)
+                    <div class="accordionItem open">
+                        <h2 class="accordionItemHeading">@sections[i].Name</h2>
+                        <div class="accordionItemContent">
+                            @for (int j = 0; j < menus.Count; j++)
                             {
-                                <div class="leftAlign">
-                                    <div class="col-md-12">
-                                        <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
-                                        <br />
-                                        <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
-                                    </div>
-                                </div>
+                                foreach (var item in Model)
+                                {
+                                    if (item.SectionNumber == menus[j].Section_ID && item.SectionNumber == sections[i].Section_ID)
+                                    {
+                                        if (i % 2 == 0)
+                                        {
+                                            <div class="leftAlignMenu">
+                                                <div class="col-md-12">
+                                                    <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
+                                                    <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                }
                             }
-                        }
-                    }
+                        </div>
+                    </div>
                 }
+                else
+                {
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">@sections[i].Name</h2>
+                        <div class="accordionItemContent">
+                            @for (int j = 0; j < menus.Count; j++)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    if (item.SectionNumber == menus[j].Section_ID && item.SectionNumber == sections[i].Section_ID)
+                                    {
+                                        if (i % 2 == 0)
+                                        {
+                                            <div class="rightAlignMenu">
+                                                <div class="col-md-12">
+                                                    <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
+                                                    <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+
+
+                }
+
             }
         }
     </div>
 </div>
+<script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionItemHeading');
+    for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+    }
+    function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+        }
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+    }
+</script>
