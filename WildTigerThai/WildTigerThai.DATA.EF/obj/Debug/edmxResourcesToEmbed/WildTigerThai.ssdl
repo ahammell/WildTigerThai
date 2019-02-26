@@ -36,7 +36,7 @@
     <Property Name="Description" Type="varchar" MaxLength="300" Nullable="false" />
     <Property Name="Active" Type="bit" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="ProductPhoto_ID" Type="int" Nullable="false" />
+    <Property Name="Photo_ID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductsToSections">
     <Key>
@@ -128,7 +128,7 @@
         <PropertyRef Name="Photo_ID" />
       </Principal>
       <Dependent Role="Products">
-        <PropertyRef Name="ProductPhoto_ID" />
+        <PropertyRef Name="Photo_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

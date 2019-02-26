@@ -18,7 +18,39 @@
                                 {
                                     if (item.SectionNumber == menus[j].Section_ID && item.SectionNumber == sections[i].Section_ID)
                                     {
-                                        if (i % 2 == 0)
+                                        <div class="leftAlignMenu">
+                                            <div class="col-md-12">
+                                                <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
+                                                <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="accordionItem close">
+                        <h2 class="accordionItemHeading">@sections[i].Name</h2>
+                        <div class="accordionItemContent">
+                            @for (int k = 1; k < menus.Count; k++)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    if (item.SectionNumber == menus[k].Section_ID && item.SectionNumber == sections[i].Section_ID)
+                                    {
+                                        if (sections[i].Section_ID % 2 == 0)
+                                        {
+                                            <div class="rightAlignMenu">
+                                                <div class="col-md-12">
+                                                    <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
+                                                    <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
+                                                </div>
+                                            </div>
+                                        }
+                                        else
                                         {
                                             <div class="leftAlignMenu">
                                                 <div class="col-md-12">
@@ -33,35 +65,6 @@
                         </div>
                     </div>
                 }
-                else
-                {
-                    <div class="accordionItem close">
-                        <h2 class="accordionItemHeading">@sections[i].Name</h2>
-                        <div class="accordionItemContent">
-                            @for (int j = 0; j < menus.Count; j++)
-                            {
-                                foreach (var item in Model)
-                                {
-                                    if (item.SectionNumber == menus[j].Section_ID && item.SectionNumber == sections[i].Section_ID)
-                                    {
-                                        if (i % 2 == 0)
-                                        {
-                                            <div class="rightAlignMenu">
-                                                <div class="col-md-12">
-                                                    <p class="productTitle">@Html.DisplayFor(modelItem => item.ProductName) - $@Html.DisplayFor(modelItem => item.Price)</p>
-                                                    <p class="productDescription">@Html.DisplayFor(modelItem => item.Description)</p>
-                                                </div>
-                                            </div>
-                                        }
-                                    }
-                                }
-                            }
-                        </div>
-                    </div>
-
-
-                }
-
             }
         }
     </div>

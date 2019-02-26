@@ -1,6 +1,15 @@
-$(document).ready(function() {
-	// fade in #back-top
+$(document).ready(function () {
+    // Dropdown Visibility on hover
+    $('li.dropdown').on('mouseover', function () {
+        $(this).addClass('open');
+    })
 
+        .on('mouseout', function () {
+            $(this).removeClass('open');
+        });
+
+
+	// fade in #back-top
 	$(window).scroll(function () {
 		if ($(this).scrollTop() >800) {
 			$('#back-top').fadeIn('slow');

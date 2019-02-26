@@ -39,7 +39,7 @@ namespace WildTigerThai.UI.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID");
+            ViewBag.Photo_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID");
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description");
             return View();
         }
@@ -49,7 +49,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductType_ID,ProductName,Description,Active,Price,ProductPhoto_ID")] Product product)
+        public ActionResult Create([Bind(Include = "ProductType_ID,ProductName,Description,Active,Price,Photo_ID")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace WildTigerThai.UI.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
+            ViewBag.Photo_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.Photo_ID);
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description", product.ProductType_ID);
             return View(product);
         }
@@ -75,7 +75,7 @@ namespace WildTigerThai.UI.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
+            ViewBag.Photo_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.Photo_ID);
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description", product.ProductType_ID);
             return View(product);
         }
@@ -85,7 +85,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Product_ID,ProductType_ID,ProductName,Description,Active,Price,ProductPhoto_ID")] Product product)
+        public ActionResult Edit([Bind(Include = "Product_ID,ProductType_ID,ProductName,Description,Active,Price,Photo_ID")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace WildTigerThai.UI.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ProductPhoto_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.ProductPhoto_ID);
+            ViewBag.Photo_ID = new SelectList(db.Photos, "Photo_ID", "Photo_ID", product.Photo_ID);
             ViewBag.ProductType_ID = new SelectList(db.ProductTypes, "ProductType_ID", "Description", product.ProductType_ID);
             return View(product);
         }

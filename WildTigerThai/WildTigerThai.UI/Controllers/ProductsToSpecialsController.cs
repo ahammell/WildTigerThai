@@ -85,7 +85,7 @@ namespace WildTigerThai.UI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductsToSpecials_ID,Product_ID,Special_ID,SpecialPrice,Active")] ProductsToSpecial productsToSpecial)
+        public ActionResult Edit([Bind(Include = "ProductToSpecial_ID,Product_ID,Special_ID,SpecialPrice,Active")] ProductsToSpecial productsToSpecial)
         {
             if (ModelState.IsValid)
             {

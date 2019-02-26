@@ -601,10 +601,19 @@ aside .closeBtn {
     width: 100%;
     user-select:none;
 }
+@keyframes closeToTop {
+    0% {
+        transform: scaleY(100);
+    }
+
+    100% {
+        transform: scaleY(0);
+    }
+}
 
 .close .accordionItemContent {
     height: 0px;
-    transition: height 1.2s ease-out;
+    -webkit-transition: height 1.2s ease;
     -webkit-transform: scaleY(0);
     -o-transform: scaleY(0);
     -ms-transform: scaleY(0);

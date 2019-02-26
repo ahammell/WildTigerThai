@@ -21,3 +21,4 @@ C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csproj.CopyComplete
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.dll
 C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.pdb
+C:\Users\Geranis\Documents\WildTigerThai\WildTigerThai\WildTigerThai.DATA.EF\obj\Debug\WildTigerThai.DATA.EF.csprojAssemblyReference.cache

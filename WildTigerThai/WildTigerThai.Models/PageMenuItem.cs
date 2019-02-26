@@ -50,7 +50,7 @@ namespace WildTigerThai.Models
                                 foreach (Photo photo in photos)
                                 {
 
-                                    if (product.ProductPhoto_ID == photo.Photo_ID)
+                                    if (product.Photo_ID == photo.Photo_ID)
                                     {
                                         item.ProductPhoto = photo.File;
                                     }
