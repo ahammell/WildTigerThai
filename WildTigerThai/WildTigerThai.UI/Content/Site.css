@@ -72,8 +72,8 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
-.logoHolder {
-    margin-right: 30% !important;
+.nav-main > .logoHolder {
+    margin-right: 30%;
     max-width: 30%;
     bottom: 25px;
 }
@@ -119,9 +119,9 @@ input[type="checkbox"].input-validation-error {
 .mobileLink {
     font-family: 'Shojumaru', cursive;
     font-weight: 100;
-    color: black;
+    color: #D10201;
     font-size: 20px;
-    text-shadow: 1px 1px lightgray;
+    text-shadow: -2px 2px white;
 }
 .noPad {
     padding:0 !important;
@@ -156,8 +156,9 @@ input[type="checkbox"].input-validation-error {
     text-align: center;
 }
 .navbar {
-    background: url(../Content/Images/Thai-Food.jpg) no-repeat bottom;
+    background: url(../Content/Images/Pineapple.jpg) bottom;
     background-size: cover;
+    border-radius: 0px;
 }
 .navdiv{
     margin-top:1%;
@@ -166,10 +167,11 @@ input[type="checkbox"].input-validation-error {
     vertical-align:bottom;
 }
 .navbar-container {
-    padding-right:2%;
-    padding-left:2%;
+    padding-right: 2.5vw;
+    padding-left:.5vw;
     margin-left:0;
     margin-right:0;
+    margin-bottom:3vw;
 }
 .navbar-nav > li {
     margin: 0;
@@ -253,6 +255,7 @@ footer .block{
     height: 9em;
     width: 16em;
     object-fit: contain;
+    margin-top:35px;
 }
 
 
@@ -407,19 +410,21 @@ footer .block{
     animation: fadein 2s;
 }
 .largeFont {
-    font-size:3em;
+    font-size:2.3vw;
 }
 .fixLeft {
     text-align: right;
-    top:15em;
-    left:15em;
+    top:10vw;
+    left:15vw;
+    word-wrap:break-word;
 }
 .fixRight {
     float:right;
     text-align: left;
-    bottom: 40em;
-    right: 15em;
+    bottom: 25vw;
+    right: 15vw;
     clear: both;
+    word-wrap:break-word;
 }
 
 .topBorder {
@@ -639,4 +644,107 @@ aside .closeBtn {
     -ms-transition: -ms-transform 0.4s ease;
     transition: transform 1.2s ease;
     box-sizing: border-box;
+}
+.contact{
+    font-size:1vw;
+}
+.siteCreator{
+    color:white;
+    text-shadow:none;
+    font-size:1.5vw;
+}
+.siteCreator:hover{
+    color:white !important;
+}
+
+@media screen and (max-width: 1535px) {
+    .nav-main > .logoHolder {
+        margin-right: 20% !important;
+    }
+}
+@media screen and (max-width:1000px){
+    .navbar-container{
+        padding-right: 2.5vw;
+    }
+    .rightAlign{
+        margin-bottom:3vw;
+    }
+    .leftAlign{
+        margin-bottom: 3vw;
+    }
+    .fixLeft{
+        left:10vw;
+        top:10vw;
+        text-align:left;
+        word-wrap: break-word;
+        width:40vw;
+    }
+    .fixRight{
+        text-align:right;
+        right: 5vw;
+        width: 40vw;
+        bottom: 35vw;
+    }
+    .moveUp{
+        bottom:15vw;
+    }
+    .largeFont {
+        font-size: 4vw;
+    }
+    body{
+        color:white;
+        text-shadow:none;
+        font-weight:bold;
+    }
+
+    .close .accordionItemContent {
+        height: 0px;
+        -webkit-transition: height 1.2s ease;
+        -webkit-transform: scaleY(0);
+        -o-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        transform: scaleY(0);
+        float: left;
+        display: block;
+    }
+
+    .open .accordionItemContent {
+        padding: 20px;
+        border: 5px solid maroon;
+        width: 100%;
+        -webkit-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: top;
+        -o-transform-origin: top;
+        -ms-transform-origin: top;
+        transform-origin: top;
+        -webkit-transition: -webkit-transform 0.4s ease-out;
+        -o-transition: -o-transform 0.4s ease;
+        -ms-transition: -ms-transform 0.4s ease;
+        transition: transform 1.2s ease;
+        box-sizing: border-box;
+    }
+    .accordionItem {
+        float: left;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .accordionItemHeading {
+        cursor: pointer;
+        width: 100%;
+        user-select: none;
+        font-size:9vw;
+    }
+    .productTitle {
+        font-size: 6vw;
+    }
+
+    .productDescription {
+        font-size: 4vw;
+    }
+
 }

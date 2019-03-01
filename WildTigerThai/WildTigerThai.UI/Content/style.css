@@ -274,10 +274,10 @@ section+section { margin-top: 50px; }
 .nav-main > li a {
     font-family: 'Shojumaru', cursive;
     font-weight:100;
-    padding: 20px 15px;
-    color: goldenrod;
-    font-size: 38px;
-    text-shadow: 1px 1px maroon;
+    padding: 20px 5px 20px 5px;
+    color: #D10201;
+    font-size: 2vw;
+    text-shadow: -2px 2px white;
 }
 .navbar-nav {
 	float: none;
@@ -624,7 +624,7 @@ footer .block span {
 	font-size: 20px;
 }
 .social-icon li a {
-	padding: 8px;
+	padding: 20px 6px 4px 4px;
 	background: #e67700;
 }
 .facebook-icon .fa-facebook {

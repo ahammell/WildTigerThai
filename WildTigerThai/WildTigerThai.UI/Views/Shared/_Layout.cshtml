@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Wild Tiger Thai Restaurant</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Kalam|Shojumaru' rel='stylesheet' type='text/css'>
@@ -53,7 +53,7 @@
                 <li class="dropdown movedownnav">
                     <a href="~/PageMenu/MainMenu">Menu</a>
                     <ul class="dropdown-menu dropdown-menu-center ">
-                        <li><a class="dropdown-menu-item" href="#">MENU DOWNLOAD</a></li>
+                        <li><a class="dropdown-menu-item" href="~/Source_Material/dinner_menu.pdf" download="Dinner Menu">MENU DOWNLOAD</a></li>
                     </ul>
                 </li>
                 <li class="movedownnav"><a href="#">Specials</a></li>
@@ -76,7 +76,7 @@
                 </a>
             </div>
             <ul class="nav navbar-nav mobileNav">
-                <li><a class="mobileLink" href="#">Menu</a></li>
+                <li><a class="mobileLink" href="~/PageMenu/MainMenu">Menu</a></li>
                 <li><a class="mobileLink" href="~/Home/Contact">Contact</a></li>
                 @Html.Partial("_loginPartial")
             </ul> <!-- End of /.nav-main -->
@@ -133,16 +133,13 @@
         </aside>
     </div>
     <footer class="footer-bottom fadeIn desktop">
-        <div class="container">
+        <div style="overflow:hidden;">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="block">
                         <a href="#" class="footer-logo">
-                            <img class="footerImage" src="~/Source_Material/wild_tiger_thai_logo/tiger_and_words.png" />
+                            <img class="footerImage" src="~/Source_Material/wild_tiger_thai_logo/proper_tiger_and_words.png" />
                         </a>
-                        <p>
-                            We are bringing new Thai flavor dishes to the South East of Vancouver, WA.
-                        </p>
                     </div>	<!-- End Of /.block -->
                 </div> <!-- End Of /.Col-md-4 -->
                 <div class="col-md-4">
@@ -155,16 +152,20 @@
                         <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 360-882-8887</p>
                     </div>	<!-- End Of /.block -->
                 </div> <!-- End Of Col-md-4 -->
-                <div class="col-md-4">
+                <div class="col-md-3" style="text-align:center; top:.6vw;">
                     <p>Find us on Facebook!</p>
                     <ul class="social-icon">
-                        <li>
+                        <li style="margin-top:20px;">
                             <a class="facebook-icon" href="https://www.facebook.com/wildtigerthairestaurantofficialpage/" target="_blank">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>
                     </ul>	<!-- End Of /.social-icon -->
                 </div><!-- End Of Col-md-4 -->
+                <div class="col-md-2" style="top:.6vw; text-align:right; right:2vw;">
+                    <p class="contact">Contact Us!</p>
+                    <a class="siteCreator" href="mailto:developmentcentralKC@gmail.com?subject=Site+Inquiry">Built By Development Central KC</a>
+                </div>
             </div> <!-- End Of /.row -->
         </div> <!-- End Of /.Container -->
     </footer> <!-- End Of Footer -->

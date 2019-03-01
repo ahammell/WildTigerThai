@@ -252,6 +252,7 @@
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Maestro.png" />
     <Content Include="Content\Images\PayPal.png" />
+    <Content Include="Content\Images\Pineapple.jpg" />
     <Content Include="Content\Images\post-img-2.png" />
     <Content Include="Content\Images\post-img-3.png" />
     <Content Include="Content\Images\post-img.png" />
@@ -274,6 +275,7 @@
     <Content Include="Content\Images\take-away %2832%29.png" />
     <Content Include="Content\Images\take-away %2864%29.png" />
     <Content Include="Content\Images\take-away.png" />
+    <Content Include="Content\Images\Thai-Food-Banner.jpg" />
     <Content Include="Content\Images\Thai-Food.jpg" />
     <Content Include="Content\Images\titleBorder.png" />
     <Content Include="Content\Images\top.png" />
@@ -545,6 +547,7 @@
     <Content Include="Views\Menus\Index.cshtml" />
     <Content Include="Views\Photos\ChoosePhoto.cshtml" />
     <Content Include="Views\PageMenu\MainMenu.cshtml" />
+    <Content Include="Source_Material\dinner_menu.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
